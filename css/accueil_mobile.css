@@ -1,0 +1,221 @@
+body{
+    margin: 0px 0px 0px 0px;
+}
+header{
+    background-color: #F6F6F6;
+}
+.bloc_de_page{
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    min-width: 320px;
+    max-width: initial; 
+}
+
+/* logo du restaurant */
+
+.logo_resto__entete{
+    display: flex;
+    justify-content: center;
+}
+img.logo_resto__entete{
+    width: 55%;
+    margin-bottom: 1em;
+}
+
+/* localisation */
+.loca_resto__entete{
+    display: flex;    
+    justify-content: center;
+    height: 10%;
+    align-items: center;
+    width: 100%;
+}
+#loca_resto__icon{
+    font-size: 1.2em;    
+    /* margin-right: 45%; */
+    color: #353535;
+    position: absolute;
+    margin-right:180px;
+}
+#loca_resto__entete{
+    height: 3em;
+    width: 80%;
+    background-color: #EAEAEA;
+    border: none;
+    width: 100%;
+    box-shadow: 0px 3px 2px inset #CECECE;    
+}
+::placeholder{
+    text-align: center;
+    color:#353535;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+.titres__entete{
+    text-align: center;  
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titreh3__entete{
+    font-weight: normal;
+}
+.titreh4__entete{
+    border: 3px solid;
+    border-radius: 40px 40px 40px 40px;
+    height: 2.5em;    
+    background-image: linear-gradient(to bottom right,#EE55FF,#9356DC );
+    color: white;
+    width: 16em;
+    padding-top: 5%;
+}
+
+.fonction{
+    margin-bottom: 15%;
+}
+
+.h2__fonction{
+  margin-left: 1.2em;   
+}
+li > a{
+    text-decoration: none;  
+    color: black; 
+    font-weight: bold;     
+}
+ol > li{
+    margin-bottom: 2em;    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 4.5em;
+    align-items: center;
+    display: flex;    
+    border-radius: 25px 25px 25px 25px;
+    width: 90%;   
+}
+ol > li:hover{    
+    background-color: #F5EDFF;
+}
+
+ol {
+    list-style: none;
+    counter-reset: item;
+}
+li {
+    counter-increment: item;
+    margin-bottom: 5px;
+}
+li:before {
+    content: counter(item);
+    background: #9356DC;
+    border-radius: 100%;
+    color: white;
+    width: 2em;
+    height: 1.6em;
+    text-align: center;
+    display: inline-block;
+    margin-left: -5%;
+    padding-top: 7px; 
+}
+
+#icon__fonction{
+    margin-right: 6%;
+    margin-left: 6%;
+    color:#7E7E7E;
+}
+#icon__fonction:hover{
+    color: #9356DC;
+}
+/* cartes restaurants */
+.cartes-resto{
+    background-color:#F2F2F2;
+    padding-bottom: 15%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.carte__resto{   
+    background-color:#fff;    
+    border-radius: 1.2em;    
+    margin-left:5%;       
+    width: 90%;
+    box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    margin-bottom: 5%;      
+}
+
+.cartes-resto__img > img{
+    width: 100%;
+    border-radius:15px 15px 0px 0px;  
+    height: 9em;
+    object-fit: cover;     
+}
+.carte__resto h4 , p{
+    margin-left: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+/* ________________________________________________*/
+
+.carte--titre{
+    margin-top: 5%;
+}
+.carte__titre__icon{
+    display: flex;
+    justify-content: space-between;
+}
+
+.carte--coeur{
+    margin-right: 7%;
+    font-size: 1.8em;
+    margin-top: 5%;
+    font-weight:initial;   
+}
+/*__________________________________________ */
+
+p{
+    padding-bottom: 15px;
+}
+h2{
+    margin-left: 5%;
+}
+
+footer{
+    background-color: #353535;
+    padding-bottom: 7%;
+}
+
+.logo_resto__footer > path{
+    fill: #fff;
+}
+
+.logo_resto__footer{
+    width: 25%; 
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+.info__footer {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.info__footer > div{
+    font-size: 1em;
+    line-height: 1.7em;
+    margin-left: 5%;
+}
+#icon_footer{
+    margin-right: 3%;
+    font-size: 0.8em;
+}  
+
+
+
+
+
+
+
+
+
+
