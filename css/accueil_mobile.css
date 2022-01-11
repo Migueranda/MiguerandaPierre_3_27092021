@@ -1,5 +1,5 @@
 body{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;    
 }
 header{
     background-color: #F6F6F6;
@@ -62,7 +62,7 @@ img.logo_resto__entete{
 .titreh3__entete{
     font-weight: normal;
 }
-.titreh4__entete{
+.titre_bouton{
     border: 3px solid;
     border-radius: 40px 40px 40px 40px;
     height: 2.5em;    
@@ -140,7 +140,9 @@ li:before {
     margin-left:5%;       
     width: 90%;
     box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
-    margin-bottom: 5%;      
+    margin-bottom: 5%;
+    text-decoration: none;
+    color: inherit;   
 }
 
 .cartes-resto__img > img{
@@ -154,6 +156,22 @@ li:before {
     margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
+    
+}
+.cartes-resto__img{
+    /* display: flex; */
+    position: relative;
+    text-align: right;
+}
+.nouveau{
+    position: absolute;
+     top: 10%;
+     right: 5%;
+     color:#018767;
+     background-color: #99E2D0;
+     padding: 3%;
+     font-weight: bold;
+     /* transform: translate(-50%, -50%); */
 }
 /* ________________________________________________*/
 
@@ -204,6 +222,10 @@ footer{
     font-size: 1em;
     line-height: 1.7em;
     margin-left: 5%;
+}
+.info__footer > div > a:last-child{
+    text-decoration: none;
+    color: inherit;
 }
 #icon_footer{
     margin-right: 3%;

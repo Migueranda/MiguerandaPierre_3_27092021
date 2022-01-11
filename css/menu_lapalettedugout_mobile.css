@@ -1,0 +1,151 @@
+body{
+    margin: 0px 0px 0px 0px;
+}
+.bloc_de_page{    
+    width: 100%;
+    min-width: 320px;
+    max-width: initial;
+    background-color: #f6f6f6;
+    font-family: 'Raleway', sans-serif;
+}
+/* |logo du restaurant| */
+ 
+img.logo_resto{
+    width: 55%;
+    margin-right: 23%;
+}
+.logo_resto__entete{
+    display: flex;
+    justify-content: center; 
+    justify-content: space-between;
+    align-items: center;
+}
+#fleche_retour_accueil{
+    margin-left: 1rem;
+    text-decoration: none;
+    color: black;
+
+}
+/* |carte du restaurant| */
+.carte-resto{    
+    display: flex;
+    padding-bottom: 15%;
+    flex-direction: column;
+    background-color:#F2F2F2;
+}
+.carte-resto__img {    
+    height: 220px;
+    background-size: 100%;
+    background-image: url('../MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+}
+h2{
+    font-family: 'Shrikhand', cursive;
+    width: 100%;
+}
+.carte--coeur{
+    margin-top: 8%;
+    font-size: 1.8em;    
+    font-weight:initial;
+}
+/* |Parti section/article: titre-menu| */
+
+#conteneur_cartes{
+ margin: 0px 15px 0px 15px;    
+}
+.titre__menu{
+    padding-left:5px;
+    padding-top: 2px;
+}
+.titre_entrees-plats-desserts{
+    width: 17%;
+    margin-left: 2%;
+    font-weight: normal;
+    border-color: #99e2d0;
+    border-bottom-style: solid;
+}
+.menu_titre_icon{   
+    display: flex;
+    padding-right: 5%;
+    margin-top: -35px;
+    background-color: #f6f6f6;
+    border-radius: 35px 35px 0px 0px; 
+     
+    justify-content: space-between;
+}
+.conteneur_entrees_plats_desserts{
+    display: flex;
+    margin-bottom: 4%;
+    padding-left: 15px;
+    padding-right: 15px;    
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+    border-radius: 14px 14px 14px 14px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.descrip_menu-entrees-plats-desserts{
+    margin-top: 12px;    
+    font-size: 1.1Sem;
+    margin-bottom: 2px;
+}
+.acommp_entrees-plats-desseerts{
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+.entrees_prix{    
+    display: flex; 
+    margin-top: 25px;   
+}
+.prix_eneuro, #symboleeuro {
+    margin-left:2px;
+    font-size: 0.9em;    
+    font-weight: bold;        
+}
+.titre_bouton{
+    width: 55%;
+    height: 2.5em;
+    display: flex;
+    color: white;    
+    padding-top: 1%;
+    border: 3px solid;
+    padding-bottom: 1%;
+    align-items: center;
+    border-radius:10rem; 
+    justify-content:center;
+    margin: 15% 20% 20% 20%;       
+    background-image: linear-gradient(to bottom right,#EE55FF,#9356DC );
+}
+.titre_bouton > h5{
+    padding-bottom: 55px;
+}
+footer{
+    padding-bottom: 7%;
+    background-color: #353535;
+}
+.logo_resto__footer > path{
+    fill: #fff;
+}
+.logo_resto__footer{
+    width: 25%; 
+    margin-left:5%;
+    margin-top: 5%;
+    margin-bottom:2%;
+}
+.info__footer {
+    color: #fff;
+    font-size: 0.9em;
+}
+.info__footer > div{
+    font-size: 1em;
+    margin-left: 5%;
+    line-height: 1.7em;
+}
+.info__footer > div > a:last-child{
+    color: inherit;
+    text-decoration: none;    
+}
+#icon_footer{
+    margin-right: 3%;
+    font-size: 0.8em;
+}  
+
