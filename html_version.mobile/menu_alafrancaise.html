@@ -2,116 +2,166 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>        
-        <!-- <link rel="stylesheet" href="./css/accueil.css"/>         -->        
-        <link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/accueil_mobile.css"/> 
-        <!-- <link rel="stylesheet" href="../css/accueil_desktop.css"/>         -->
+        <link rel="stylesheet" href="./css/accueil.css"/>        
+        <link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/menu_alafrancaise_mobile.css"/>        
 	    <meta charset="utf-8">
 	    <title>ohmyfood</title>
-        <script src="https://kit.fontawesome.com/307c15301f.js" crossorigin="anonymous"></script>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-        </style>
+        <script src="https://kit.fontawesome.com/307c15301f.js" crossorigin="anonymous"></script>        
     </head>
     <body>
         <div class="bloc_de_page">
+            <div class="logo_resto__entete">
+               <a href="index.html"><i class="fas fa-arrow-left" id="fleche_retour_accueil"></i></a> 
+                <img src="../MaquettesOhmyfood/images/logo/ohmyfood.png"  class="logo_resto" alt="Logo ohmyfood"/>
+            </div>            
             <header>
-            
-                <div class="logo_resto__entete">
-                    <img src="../MaquettesOhmyfood/images/logo/ohmyfood.png"  class="logo_resto__entete" alt="Logo ohmyfood" >
-                </div>
-                <div class="loca_resto__entete">
-                    <i class="fas fa-map-marker-alt" id="loca_resto__icon"></i>
-                    <input type="text" name="localisation" id="loca_resto__entete" placeholder="Paris, Belleville"/>
-                </div>
-                <div class="titres__entete">
-                    <h2 class="titreh2__entete">Réservez le menu qui vous convient</2>
-                    <h3 class="titreh3__entete">Découvrez des restaurants d'exception, séléctionnés par nos soins</h3>
-                    <!-- <h4 class="titreh4__entete">Explorer nos restaurants</h4> -->
-                    <div class="titre_bouton">Explorer nos restaurants</div>
-                </div>
-             </header> 
+                <div class="carte__resto">
+                    <div class="carte-resto__img"> </div>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                       </style>
 
-             <nav class="fonction"> 
-                <h2 class="h2__fonction">Fonctionnement</h2>
-                <ol>
-                    <li><i class="fas fa-mobile-alt" id="icon__fonction"></i><a href="#">Choisissez un restaurant</a></li>
-                    <li><i class="fas fa-list-ul" id="icon__fonction"></i><a href="#">Composez votre menu</a></li>
-                    <li><i class="fas fa-store"id="icon__fonction"></i><a href="#">Dégustez au restaurant</a></li>
-                </ol>
-            </nav>
-            <section>
-                <article class="cartes-resto">
-                    <h2>Restaurants</h2>
-                    <!-- Carte 1 -->
-                    <a class="carte__resto"  href="menu_lapalettedugout.html">
-                        <div class="cartes-resto__img">
-                            <img src="../MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"/>
-                            <div class="nouveau">Nouveau</div>
-                        </div>
-                        <div class="carte__titre__icon">
-                            <div class="carte--titre">
-                                <h4>La palette du goût</h4>
-                                <p>Ménilmontant</p>
-                            </div> 
+                       <div class="menu_titre_icon"> 
+                           <div class="titre__menu">
+                               <h2>À la française</h2>
+                            </div>    
+                            
                             <div class="carte--coeur">                             
                                 <i class="far fa-heart"></i>
                             </div> 
-                        </div>      
-                    </a>
-                      <!-- Carte 2 -->          
-                    <a class="carte__resto" href="menu_lanoteenchantee.html">
-                        <div class="cartes-resto__img">
-                            <img src="../MaquettesOhmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"/>
-                            <div class="nouveau">Nouveau</div>
+                       </div>
+                </div>                
+            </header> 
+             <section>
+                 <article id="conteneur_cartes">
+                     <!-- ****************************TITRE DES ENTREES*********************** -->
+                     <!-- ******************************************************************** -->
+                    <div class="titre__entrees">                        
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                        </style>                           
+                        <h3 class="titre_entrees-plats-desserts">ENTRÉES</h3>                        
+                    </div>
+                    <!--**************** LES ENTREES*********************************** -->                    
+                    <!--entrée 1________________________entrée 1______________________________entrée 1_____________ -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Tartare de poulpe acidulé</h4>
+                            <p class="acommp_entrees-plats-desseerts">Aux zests d'orange</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">25</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
                         </div>
-                        <div class="carte__titre__icon">
-                            <div class="carte--titre">
-                                <h4>La note enchantée</h4>
-                                <p>Charonne</p>
-                            </div>
-                            <div class="carte--coeur">                             
-                                <i class="far fa-heart"></i>
-                            </div>
-                        </div>      
-                    </a>
-                     <!-- Carte 3-->   
-                    <a class="carte__resto" href="menu_alafrancaise.html">
-                        <div class="cartes-resto__img">
-                            <img src="../MaquettesOhmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"/>
-                            <div class="nouveau">Nouveau</div>
+                    </div>
+                    <!--entrée 2 _______________________ entrée 2 ___________________________ entrée 2______________-->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Vélouté de légumes d'antan</h4>
+                            <p class="acommp_entrees-plats-desseerts">Carotte, pannais, topinambour</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">35</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
                         </div>
-                        <div class="carte__titre__icon">
-                            <div  class="carte--titre">
-                                <h4>À la française</h4>
-                                <p>Cité Rouge</p>
-                            </div>
+                    </div>
+                    <!--entrée 3 ___________________ entrée 3 _______________________entrée 3_____________________ -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Soupe à l'oignon</h4>
+                            <p class="acommp_entrees-plats-desseerts">Revisitée</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">20</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        </div>
+                    </div>
+                    <!--  *********************TITRE DU PLAT**************************** -->
+                    <!--  ************************************************************** -->
+                    <div class="titre__plats">                        
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                        </style>                           
+                        <h3 class="titre_entrees-plats-desserts">PLATS</h3>                        
+                    </div>
 
-                            <div class="carte--coeur">                             
-                                <i class="far fa-heart" id="icon_coeur"></i>
-                            </div>
-                        </div>  
-                    </a>
-                    <!-- Carte 4 -->
-                    <a class="carte__resto" href="menu_ledelicedessens.html">
-                        <div class="cartes-resto__img">
-                            <img src="../MaquettesOhmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"/>
-                            <div class="nouveau">Nouveau</div>
+                    <!--*************** PLATS*****PLATS*****PLATS****PLATS************************************** -->
+                    <!-- Plat 1_______________________ Plat 1_____________________________ Plat 1__________________ -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Coquilles Saint-Jacques</h4>
+                            <p class="acommp_entrees-plats-desseerts">Accompagnées d'une purée de pannais</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">40</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
                         </div>
-                        <div class="carte__titre__icon">
-                            <div class="carte--titre">
-                                <h4>Le délice des sens</h4>
-                                <p>Folie-Méricourt</p>
-                            </div>
-
-                            <div class="carte--coeur">                               
-                                <i class="far fa-heart"></i>
-                            </div>   
+                    </div>
+                    <!-- Plat 2_________________________ Plat 2 ___________________________ Plat 2 ___________________ -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Magret de canard</h4>
+                            <p class="acommp_entrees-plats-desseerts">Et parmentier de pommes de terres</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">35</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
                         </div>
-                    </a>
+                    </div>
+                        <!--Plat 3_______________________ Plat 3_______________________________ Plat 3___________________  -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">PigeonneauVilaine</h4>
+                            <p class="acommp_entrees-plats-desseerts">Sur sont lit  de gnocchi aux légumes</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">44</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        </div>
+                    </div>
 
-                </article>
-            </section>
-            <footer>                            
+                    <!--  *********************TITRE DU DESSERT**************************** -->
+                    <!--  ***************************************************************** -->
+                    <div class="titre__desert">                        
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                        </style>                           
+                        <h3 class="titre_entrees-plats-desserts">DESSERTS</h3>                        
+                    </div>
+
+                    <!-- Dessert 1_______________________ Dessert 1_____________________________ Dessert 1__________________ -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Pétales de violettes glacés</h4>
+                            <p class="acommp_entrees-plats-desseerts">Et purées de noisettes</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">18</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        </div>
+                    </div>
+                    <!-- Dessert 2_________________________ Dessert 2 ___________________________ Dessert 2 ___________________ -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Fondant chocolats</h4>
+                            <p class="acommp_entrees-plats-desseerts">Revisité</p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">22</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        </div>
+                    </div>
+                        <!-- Dessert 3_______________________ Dessert 3_______________________________ Dessert 3___________________  -->
+                    <div class="conteneur_entrees_plats_desserts">
+                        <div>
+                            <h4 class="descrip_menu-entrees-plats-desserts">Millefeuille croustillant</h4>
+                            <p class="acommp_entrees-plats-desseerts">Myrtilles et pâte d'amande </p>
+                        </div>                        
+                        <div class="entrees_prix" >
+                            <div class="prix_eneuro">23</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        </div>
+                    </div> 
+                    
+                    <div class="titre_bouton">
+                       <div class="titre_bouton_commander">Commander</div>
+                    </div>
+
+                 </article>
+             </section>
+
+             <footer>                            
                 <!-- <img src="ohmyfood@2x.svg"  class="logo_resto__footer" alt="Logo ohmyfood"/> -->
                     <svg  class="logo_resto__footer" width="196" height="34" viewBox="0 0 196 34" fill="none" xmlns="http://www.w3.org/2000/svg">    
                         <path d="M13.932 7.956C17.196 7.956 19.596 8.61599 21.132 9.936C22.692 11.256 23.472 12.984 23.472 15.12C23.472 15.84 23.376 16.644 23.184 17.532C22.728 19.5 21.876 21.228 20.628 22.716C19.38 24.18 17.844 25.32 16.02 26.136C14.22 26.928 12.264 27.324 10.152 27.324C6.81599 27.324 4.34399 26.664 2.73599 25.344C1.15199 24 0.359985 22.224 0.359985 20.016C0.359985 19.272 0.455985 18.444 0.647985 17.532C1.10399 15.66 1.96799 14.004 3.23999 12.564C4.53599 11.1 6.10799 9.972 7.95599 9.18C9.82799 8.364 11.82 7.956 13.932 7.956ZM13.824 11.16C13.32 11.16 12.78 11.616 12.204 12.528C11.652 13.416 10.992 15.108 10.224 17.604C9.45599 20.1 9.07199 21.852 9.07199 22.86C9.07199 23.388 9.15599 23.748 9.32399 23.94C9.49199 24.108 9.71999 24.192 10.008 24.192C10.512 24.24 11.028 23.808 11.556 22.896C12.108 21.984 12.792 20.208 13.608 17.568C14.352 15.24 14.724 13.548 14.724 12.492C14.724 11.988 14.64 11.64 14.472 11.448C14.328 11.256 14.112 11.16 13.824 11.16Z" fill="#101010"/>
@@ -130,7 +180,6 @@
                     <div><a href="mailto:migueranda.pierre@hotmail.com">Contact</a></div>
                 </div>
             </footer>
-        </div>           
-
+        </div>
     </body>
 </html>
