@@ -50,7 +50,8 @@ h2{
 /* |Parti section/article: titre-menu| */
 
 #conteneur_cartes{
- margin: 0px 15px 0px 15px;    
+ margin: 0px 15px 0px 15px;  
+
 }
 .titre__menu{
     padding-left:5px;
@@ -72,7 +73,31 @@ h2{
      
     justify-content: space-between;
 }
-.conteneur_entrees_plats_desserts{
+/* Animation Animation Animation Animation Animation */
+@keyframes entree_plat_dessert{
+    0%{
+      transform: scaleY(0.9);
+      opacity:0;
+    }
+    25%{
+  
+      opacity:0;
+    }
+    50%{
+  
+      opacity:0.30;
+    }
+    75%{
+  
+      opacity:0.60;
+    }
+    100%{
+       transform: scaleY(1);
+      opacity:1;
+    }
+  }
+
+.menu__entre_plat_dessert{
     display: flex;
     margin-bottom: 4%;
     padding-left: 15px;
@@ -82,20 +107,41 @@ h2{
     justify-content: space-between;
     border-radius: 14px 14px 14px 14px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation:entree_plat_dessert ease-in ; 
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+   
 }
+
+.conteneur_entrees{    
+    animation-delay:200ms;    
+}
+.conteneur_plats{
+    animation-delay:400ms; 
+}
+.conteneur_desserts{
+    animation-delay:600ms;
+}
+
+/* Animation Animation Animation Animation Animation */
+
+
 .descrip_menu-entrees-plats-desserts{
     margin-top: 12px;    
     font-size: 1.1Sem;
     margin-bottom: 2px;
 }
+/* Animation Animation Animation Animation Animation */
 .acommp_entrees-plats-desseerts{
     margin-top: 2px;
     margin-bottom: 12px;
 }
+
 .entrees_prix{    
     display: flex; 
     margin-top: 25px;   
 }
+/* Animation Animation Animation Animation Animation */
 .prix_eneuro, #symboleeuro {
     margin-left:2px;
     font-size: 0.9em;    
