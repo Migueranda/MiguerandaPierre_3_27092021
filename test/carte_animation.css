@@ -1,0 +1,100 @@
+.menu__entre_plat_dessert{
+    display: flex;
+     width:30%;
+     margin-bottom: 4%;
+     padding-left: 15px;
+     align-items: center;
+     background-color: #fff;
+     justify-content: space-between;
+  
+     border-radius: 14px 14px 14px 14px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   
+   
+ }
+ .vide{
+   width:0px;
+   height:100px; 
+   background-color:red;
+   border-radius: 0px 14px 14px 0px; 
+  transition: width linear 500ms;
+ }
+ .menu__entre_plat_dessert:active > .vide{
+   width:30%;
+ }
+ .prix_eneuro{
+ padding-left:95px;
+   /* padding-right:15px; */
+   display: inline;
+ }
+ #symboleeuro{
+     padding-right: 15px;
+ }
+ #check{
+     color: black;
+     position: relative;
+     background-color: black;
+     color: blueviolet;
+     width: 30px;
+     height: 30px;
+     text-align: center;
+     padding: 15px 10px 10px 10px;
+     border-radius: 50%;
+     
+
+     
+
+ }
+ 
+   
+ /* .descrip_menu-entrees-plats-desserts{
+   text-overflow: ellipsis;
+ }
+  */
+ 
+ /* @keyframes vide{
+   0%{
+   transform: scaleX(0); 
+     width:0%;  
+     
+   }
+   50%{
+     transform-origne: translateX(0%);
+ /*     width:30%; */
+ /*   }
+   100%{
+   transform: translateX(0%);
+ /*     width:30%;    */
+  
+ /*   }
+ } */ 
+ /* .menu__entre_plat_dessert:active > .vide{
+   transform:scaleX(1);
+   transition:transform 30ms;
+ }
+ @keyframes vide{
+   0%{   
+     transform:scaleX(0);
+     
+   }
+   17%{
+     transform:scaleX(.18);
+   }
+   24%{
+     transform:scaleX(.4); 
+     animation-timing-function:cubic-bezier(.9,0,.1,1);
+   }
+   46%{
+     tranform:scaleX(.81); 
+    opacity:1; 
+  animation-timing-function: cubic-bezier(.25,0.25,1); 
+   }
+   85%, 100%{
+     opacity:1;
+   }
+   100%{
+     transform: scaleX(1);
+   }
+ } */
