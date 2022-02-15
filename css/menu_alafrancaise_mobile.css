@@ -1,14 +1,7 @@
 body{
     margin: 0px 0px 0px 0px;
 }
-
-/* _________________ */
-section{
-    width: 100%;
-}
-/* _________________ */
-.bloc_de_page{    
-    /* width: 100%; */
+.bloc_de_page{      
     min-width: 320px;
     max-width: initial;
     background-color: #f6f6f6;
@@ -26,16 +19,10 @@ img.logo_resto{
     justify-content: space-between;
     align-items: center;
 }
-/* .logo_resto__entete:first-child{
- color: blueviolet;
- background-color: chartreuse;
-} */
-
 #fleche_retour_accueil{
     margin-left: 1rem;
     text-decoration: none;    
     color: black;
-
 }
 /* |carte du restaurant| */
 .carte-resto{    
@@ -49,33 +36,73 @@ img.logo_resto{
     background-size: 100%;
     background-image: url('../MaquettesOhmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
 }
-h2{
+.menu_titre_icon{   
+    display: flex;
+    padding-right: 5%;
+    padding-top: 3%;
+    margin-top: -30px;
+    background-color: #f6f6f6;
+    border-radius: 35px 35px 0px 0px;     
+    justify-content: space-between;
+}
+.titre__menu h2{
     font-family: 'Shrikhand', cursive;
     width: 100%;
     margin-left: 10%;
 }
 .carte--coeur{
-    margin-top: 8%;
-    font-size: 1.8em;    
-    font-weight:initial;
+    display:flex;
+    justify-content:center;    
+    align-items: center; 
+    padding-right: 5%;      
+}
+.coeur_vide{  
+    margin-top: 0px;
+    margin-right: -0px;
+    position: absolute;  
+    font-size: 25px; 
+}
+.coeur_plein > .fa{
+    background: -webkit-linear-gradient(bottom,#9900ff, #ff66ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: #9900ff; */
+}
+div.coeur_plein svg * {
+    fill: url(#svg_coeur_gradient);  
+}
+div.coeur_plein {
+    font-size: 27px;  
+    opacity: 0;     
+}  
+div.coeur_plein:active{
+    animation: 300ms coeur ease-out forwards;
+}  
+@keyframes coeur{
+    0%{
+      opacity: 0;
+      transform: scale(0.1);    
+      transform-origin:bottom;
+    }   
+    50%{
+      opacity: 1;
+      transform: scale(0.8);
+      transform-origin:bottom
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1);
+      transform-origin:bottom
+    }
 }
 /* |Parti section/article: titre-menu| */
-
-#conteneur_cartes{
- /* margin: 0px 15px 0px 15px;   */
+#conteneur_cartes{ 
  margin: 0px 0px 0px 0px;
-
 }
-/* _________________ */
-.container_parent_entrees{
+.titre__entrees, .titre__plats, .titre__desert{
     display: flex;
-    justify-content:center;
-    margin: 10px 10px 10px 10px;
-}
-/* ____________________ */
-.titre__menu{
-    padding-left:5px;
-    padding-top: 2px;
+    justify-content: start;
+    margin-left: 5%;
 }
 .titre_entrees-plats-desserts{
     width: 10%;
@@ -84,13 +111,61 @@ h2{
     border-color: #99e2d0;
     border-bottom-style: solid;
 }
-.menu_titre_icon{   
+.container_parent_entrees{
     display: flex;
-    padding-right: 5%;
-    margin-top: -35px;
-    background-color: #f6f6f6;
-    border-radius: 35px 35px 0px 0px;     
-    justify-content: space-between;
+    justify-content:center;
+    margin: 10px 10px 10px 10px;
+}
+.menu__entre_plat_dessert{
+    display: flex;     
+    height: 70px;    
+    margin-bottom: 4%;
+    width: 90%;     
+    align-items: center;
+    background-color: #fff;    
+    border-radius: 14px 14px 14px 14px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation:entree_plat_dessert ease-in ; 
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    flex-wrap: nowrap;   
+}
+.cont_descrip_acomp{
+    display: flex;
+    flex-direction: column;    
+    width: 300px;   
+    padding:10px;     
+}
+.descrip_menu-entrees-plats-desserts{    
+    font-size: 1em;
+    margin-bottom: 2px;    
+}
+.acommp_entrees-plats-desseerts{
+    margin-top: 2px;
+    font-size: 0.8em;    
+}
+.ellipsis{ 
+    text-overflow: inherit;    
+    overflow: hidden;     
+    transition: transform  linear 300ms;
+}
+.entrees_prix{    
+    display: flex; 
+    margin-top: 25px; 
+    padding-left:14px;      
+    width: 40px;
+    padding-left: 45px;
+    justify-content: end;    
+    padding-right: 1em;    
+}
+.prix_eneuro{     
+    padding-right:2px;     
+}
+.prix_eneuro, .symboleeuro{
+    margin-left:2px;   
+    font-size: 0.9em;    
+    font-weight: bold;    
+    display: inline; 
 }
 @keyframes entree_plat_dessert{
     0%{
@@ -113,23 +188,6 @@ h2{
        transform: scaleY(1);
       opacity:1;
     }
-  }
-
-.menu__entre_plat_dessert{
-    display: flex;     
-    height: 70px;    
-    margin-bottom: 4%;
-    /* width: 97%;      */
-    width:360px;
-    /* padding: 5px;     */
-    align-items: center;
-    background-color: #fff;    
-    border-radius: 14px 14px 14px 14px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    animation:entree_plat_dessert ease-in ; 
-    animation-duration: 1.5s;
-    animation-fill-mode: backwards;
-    flex-wrap: nowrap;   
 }
 .container_check_icone{
     display:flex ;
@@ -140,8 +198,8 @@ h2{
     background-color:#99E2D0;
     border-radius: 0px 14px 14px 0px;     
     transition: width linear 300ms;
+    
 }
-
 .div_check_icone{  
     text-align: center; 
     visibility:hidden; 
@@ -151,49 +209,13 @@ h2{
     line-height: 1.9;
     background-color: white; 
     color: #99E2D0;
-    width: 30px;
-    height: 30px;
+    /* ______________ */
+    /* margin-left: 25%; */
+    /* ________________ */
+    width: 28px;
+    height: 28px;
     border-radius: 50%;   
     transition: transform  linear 300ms;
-}
-/* ______________________________TRANSITIONS-ANIMATIONS____________________________________ */
-.conteneur_entrees{    
-    animation-delay:200ms;    
-}
-.conteneur_plats{
-    animation-delay:400ms; 
-}
-.conteneur_desserts{
-    animation-delay:600ms;
-}
-
-.menu__entre_plat_dessert:hover > .container_check_icone { /*Transition avec bacground color mint*/
-    width:25%; 
-} 
- 
-.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone {/*Transition qui contient mon check(visto)*/
-    visibility: unset; 
-}
-
-.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > #check_icone{/*Animation du check(visto) avec de keyframes*/    
-    animation: check_check 300ms;  
-}
-.menu__entre_plat_dessert:hover > .ellipsis {/* transition ellipsis(tros petits points)*/
-    text-overflow: ellipsis;  
-    white-space: nowrap;    
-} 
-
-.ellipsis{ 
-    text-overflow: inherit;    
-    overflow: hidden;     
-    transition: transform  linear 300ms;
-}
-.cont_descrip_acomp{
-    display: flex;
-    flex-direction: column;    
-    width: 300px;   
-    padding:10px; 
-    /* width: 66%; */
 }
 @keyframes check_check{
     0%{
@@ -203,36 +225,29 @@ h2{
       transform: rotate(160deg);
     }
 }
-
-.descrip_menu-entrees-plats-desserts{
-    margin-top: 12px;    
-    font-size: 1.1em;
-    margin-bottom: 2px;    
+/* ______________________________TRANSITIONS-ANIMATIONS-Container_parent____________________________________ */
+.conteneur_entrees{    
+    animation-delay:200ms;    
 }
-.acommp_entrees-plats-desseerts{
-    margin-top: 2px;
-    margin-top: 5px;
-    margin-bottom: 12px;   
+.conteneur_plats{
+    animation-delay:400ms; 
 }
-.entrees_prix{    
-    display: flex; 
-    margin-top: 25px; 
-    padding-left:14px;     
-    /* width: 27%; */
-    width: 40px;
-    justify-content: end;    
-    padding-right: 1em;    
+.conteneur_desserts{
+    animation-delay:600ms;
 }
-.prix_eneuro{     
-    padding-right:2px;     
+.menu__entre_plat_dessert:hover > .container_check_icone { /*Transition avec bacground color mint*/    
+    width: 120px;
+} 
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone {/*Transition qui contient mon check(visto)*/
+    visibility: unset; 
 }
-.prix_eneuro, .symboleeuro{
-    margin-left:2px;   
-    font-size: 0.9em;    
-    font-weight: bold;    
-    display: inline; 
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > #check_icone{/*Animation du check(visto) avec de keyframes*/    
+    animation: check_check 300ms;  
 }
-
+.menu__entre_plat_dessert:hover > .ellipsis {/* transition ellipsis(tros petits points)*/
+    text-overflow: ellipsis;  
+    white-space: nowrap;    
+} 
 .titre_bouton{
     display: flex;
     justify-content: center;
