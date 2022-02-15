@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width"/>        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
         <!-- <link rel="stylesheet" href="./css/accueil.css"/>         -->        
         <link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/accueil_mobile.css"/> 
+        <link rel="stylesheet" href="../css/normalize.css">
         <!-- <link rel="stylesheet" href="../css/accueil_desktop.css"/>         -->
 	    <meta charset="utf-8">
 	    <title>ohmyfood</title>
@@ -19,8 +20,7 @@
         </div>
         <!-- Spinner -->
         <div class="bloc_de_page">
-            <header>
-            
+            <header>            
                 <div class="logo_resto__entete">
                     <img src="../MaquettesOhmyfood/images/logo/ohmyfood.png"  class="logo_resto__entete" alt="Logo ohmyfood" >
                 </div>
@@ -35,7 +35,6 @@
                     <div class="titre_bouton">Explorer nos restaurants</div>
                 </div>
              </header> 
-
              <nav class="fonction"> 
                 <h2 class="h2__fonction">Fonctionnement</h2>
                 <ol>
@@ -44,7 +43,7 @@
                     <li><i class="fas fa-store"id="icon__fonction"></i><a href="#">Dégustez au restaurant</a></li>
                 </ol>
             </nav>
-            <section>
+            <section>                
                 <article class="cartes-resto">
                     <h2>Restaurants</h2>
                     <!-- Carte 1 -->
@@ -58,9 +57,12 @@
                                 <h4>La palette du goût</h4>
                                 <p>Ménilmontant</p>
                             </div> 
-                            <div class="carte--coeur">                             
+                            <div class="coeur_vide">                             
                                 <i class="far fa-heart"></i>
-                            </div> 
+                            </div>                             
+                            <div class="coeur_plein"> 
+                                <i class="fa fa-heart"></i>
+                            </div>                             
                         </div>      
                     </a>
                       <!-- Carte 2 -->          
@@ -74,9 +76,12 @@
                                 <h4>La note enchantée</h4>
                                 <p>Charonne</p>
                             </div>
-                            <div class="carte--coeur">                             
+                            <div class="coeur_vide">                             
                                 <i class="far fa-heart"></i>
-                            </div>
+                            </div>                            
+                            <div class="coeur_plein"> 
+                                <i class="fa fa-heart"></i>
+                            </div>                              
                         </div>      
                     </a>
                      <!-- Carte 3-->   
@@ -90,10 +95,12 @@
                                 <h4>À la française</h4>
                                 <p>Cité Rouge</p>
                             </div>
-
-                            <div class="carte--coeur">                             
+                            <div class="coeur_vide">                             
                                 <i class="far fa-heart" id="icon_coeur"></i>
-                            </div>
+                            </div>                            
+                            <div class="coeur_plein"> 
+                                <i class="fa fa-heart"></i>
+                            </div>                             
                         </div>  
                     </a>
                     <!-- Carte 4 -->
@@ -107,13 +114,14 @@
                                 <h4>Le délice des sens</h4>
                                 <p>Folie-Méricourt</p>
                             </div>
-
-                            <div class="carte--coeur">                               
+                            <div class="coeur_vide">                               
                                 <i class="far fa-heart"></i>
-                            </div>   
+                            </div>                            
+                            <div class="coeur_plein"> 
+                                <i class="fa fa-heart"></i>
+                            </div>                              
                         </div>
                     </a>
-
                 </article>
             </section>
             <footer>                            
@@ -135,7 +143,6 @@
                     <div><a href="mailto:migueranda.pierre@hotmail.com">Contact</a></div>
                 </div>
             </footer>
-        </div>           
-
+        </div> 
     </body>
 </html>

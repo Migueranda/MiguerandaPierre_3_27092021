@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width"/>        
+        <meta name="viewport" content="width=device-width initial-scale=1.0"/>        
         <link rel="stylesheet" href="./css/accueil.css"/>        
-        <link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/menu_lapalettedugout_mobile.css"/>        
+        <link rel="stylesheet" media="screen and (max-width: 480px)" href="../css/menu_lapalettedugout_mobile.css"/>
+        <link rel="stylesheet" href="../css/normalize.css">        
 	    <meta charset="utf-8">
 	    <title>ohmyfood</title>
         <script src="https://kit.fontawesome.com/307c15301f.js" crossorigin="anonymous"></script>        
+        <!-- <script src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script> -->
     </head>
     <body>
         <div class="bloc_de_page">
             <div class="logo_resto__entete">
-                <a href="index.html"><i class="fas fa-arrow-left" id="fleche_retour_accueil"></i></a>
-                <img src="../MaquettesOhmyfood/images/logo/ohmyfood.png"  class="logo_resto" alt="Logo ohmyfood" >
+                <a href="index.html"><i class="fas fa-arrow-left" id="fleche_retour_accueil"></i></a> 
+                <img src="../MaquettesOhmyfood/images/logo/ohmyfood.png"  class="logo_resto" alt="Logo ohmyfood"/>
             </div>            
             <header>
                 <div class="carte__resto">
@@ -20,147 +22,199 @@
                         <style>
                             @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
                        </style>
-
                        <div class="menu_titre_icon"> 
                            <div class="titre__menu">
                                <h2>La palette du goût</h2>
-                            </div>    
-                            
-                            <div class="carte--coeur">                             
-                                <i class="far fa-heart"></i>
-                            </div> 
+                            </div>                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="0px" height="0px" >
+                                <defs>
+                                <linearGradient id="svg_coeur_gradient" x1="40%" y1="100%" x2="60%" y2="0%" >
+                                    <stop offset="0%" style="stop-color:rgb(255,102,255);stop-opacity:1.00" />
+                                    <stop offset="100%" style="stop-color:rgb(103,58,183);stop-opacity:1.00" />
+                                    <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1.00" />
+                                    <stop offset="100%" style="stop-color:rgb(156,39,176);stop-opacity:1.00" />
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="carte--coeur"> 
+                                <div class="coeur_vide">                           
+                                    <i class="far fa-heart"></i>                                    
+                                </div>      
+                                <div class="coeur_plein"> 
+                                    <i class="fa fa-heart"></i>
+                                </div>  
+                            </div>                           
                        </div>
                 </div>                
             </header> 
              <section>
                  <article id="conteneur_cartes">
-                     <!-- ****************************TITRE DES ENTREES*********************** -->
-                     <!-- ******************************************************************** -->
-                    <div class="titre__entrees">                        
-                        <style>
-                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-                        </style>                           
-                        <h3 class="titre_entrees-plats-desserts">ENTRÉES</h3>                        
-                    </div>
-                    <!--**************** LES ENTREES*********************************** -->                    
-                    <!--entrée 1________________________entrée 1______________________________entrée 1_____________ -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Fricassée d'escargot</h4>
-                            <p class="acommp_entrees-plats-desseerts">Au piment d'espelette</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">25</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        <!-- ****************************TITRE DES ENTREES*********************** -->
+                        <!-- ******************************************************************** -->
+                        <div class="titre__entrees">                        
+                            <style>
+                                @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                            </style>                           
+                            <h3 class="titre_entrees-plats-desserts">ENTRÉES</h3>                        
                         </div>
-                    </div>
-                    <!--entrée 2 _______________________ entrée 2 ___________________________ entrée 2______________-->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Foie gras de canard mi-cuit</h4>
-                            <p class="acommp_entrees-plats-desseerts">Et ses copeaux de truffe noire</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">35</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        <!--**************** LES ENTREES*********************************** -->                    
+                        <!--entrée 1________________________entrée 1______________________________entrée 1_____________ -->
+                        <div class="container_parent_entrees">
+                            <div class="menu__entre_plat_dessert conteneur_entrees ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Fricassée d'escargot</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Au pimet despelette</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">25</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>  
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                         </div>  
+                        <!--entrée 2 _______________________ entrée 2 ___________________________ entrée 2______________-->
+                        <div class="container_parent_entrees">
+                            <div class="menu__entre_plat_dessert conteneur_entrees ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Foie gras de canard mi-cuit</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis"> Et ses copeaux de truffe noire</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">35</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>                                    
+                                </div>
+                            </div>
+                        </div>   
+                        <!--entrée 3 ___________________ entrée 3 _______________________entrée 3_____________________ -->
+                        <div class="container_parent_entrees">
+                            <div class="menu__entre_plat_dessert conteneur_entrees ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Oeuf au plat</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Assaisonné à la truffe sur lit de...</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">20</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                        </div>   
+                        <!--  *********************TITRE DU PLAT**************************** -->
+                        <!--  ************************************************************** -->
+                        <div class="titre__plats">                        
+                            <style>
+                                @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                            </style>                           
+                            <h3 class="titre_entrees-plats-desserts">PLATS</h3>                        
                         </div>
-                    </div>
-                    <!--entrée 3 ___________________ entrée 3 _______________________entrée 3_____________________ -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Oeuf au plat</h4>
-                            <p class="acommp_entrees-plats-desseerts">Assaisonné à la truffe sur lit de...</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">20</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        <!--*************** PLATS*****PLATS*****PLATS****PLATS************************************** -->
+                        <!-- Plat 1_______________________ Plat 1_____________________________ Plat 1__________________ -->
+                        <div  class="container_parent_entrees">
+                            <div class="menu__entre_plat_dessert conteneur_plats ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Filet de boeuf aux herbes  </h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Accompagné de sa ribambelle de légumes</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">40</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                        </div>    
+                        <!-- Plat 2_________________________ Plat 2 ___________________________ Plat 2 ___________________ -->
+                        <div  class="container_parent_entrees">
+                            <div class="menu__entre_plat_dessert conteneur_plats ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Parmentier de queue de boeuf</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">À la truffe noire sur sa purée de panais</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">35</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                        </div>   
+                            <!--Plat 3_______________________ Plat 3_______________________________ Plat 3___________________  -->                           
+                        <div class="container_parent_entrees">     
+                            <div class="menu__entre_plat_dessert conteneur_plats ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Filet de Turbot</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Aux agrumes</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">44</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                        </div>      
+                        <!--  *********************TITRE DU DESSERT**************************** -->
+                        <!--  ***************************************************************** -->
+                        <div class="titre__desert">                        
+                            <style>
+                                @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+                            </style>                           
+                            <h3 class="titre_entrees-plats-desserts">DESSERTS</h3>                        
                         </div>
-                    </div>
-                    <!--  *********************TITRE DU PLAT**************************** -->
-                    <!--  ************************************************************** -->
-                    <div class="titre__plats">                        
-                        <style>
-                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-                        </style>                           
-                        <h3 class="titre_entrees-plats-desserts">PLATS</h3>                        
-                    </div>
-
-                    <!--*************** PLATS*****PLATS*****PLATS****PLATS************************************** -->
-                    <!-- Plat 1_______________________ Plat 1_____________________________ Plat 1__________________ -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Filet de boeuf aux herbes </h4>
-                            <p class="acommp_entrees-plats-desseerts"> Accompagné de sa ribambelle de légu...</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">40</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
+                        <!-- Dessert 1_______________________ Dessert 1_____________________________ Dessert 1__________________ -->
+                        <div class="container_parent_entrees">   
+                            <div class="menu__entre_plat_dessert conteneur_desserts ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Paris-Brest</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Revisité</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">18</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                        </div>    
+                        <!-- Dessert 2_________________________ Dessert 2 ___________________________ Dessert 2 ___________________ -->
+                        <div class="container_parent_entrees">   
+                            <div class="menu__entre_plat_dessert conteneur_desserts ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Macaron au chocolat «exception</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Et glace à la vanille de Madagascar</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">22</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div>
+                         </div>   
+                            <!-- Dessert 3_______________________ Dessert 3_______________________________ Dessert 3___________________ -->
+                        <div class="container_parent_entrees">      
+                            <div class="menu__entre_plat_dessert conteneur_desserts ellipsis">
+                                <div class="cont_descrip_acomp ellipsis">
+                                    <h4 class="descrip_menu-entrees-plats-desserts ellipsis">Mousse au chocolat</h4>
+                                    <p class="acommp_entrees-plats-desseerts ellipsis">Au piment despelette et â la truffe noire</p>
+                                </div>                        
+                                <div class="entrees_prix" >
+                                    <div class="prix_eneuro">23</div><i class="symboleeuro fas fa-euro-sign"></i>
+                                </div>
+                                <div class="container_check_icone">
+                                    <div class="div_check_icone"><i class="fas fa-check" id="check_icone"></i></div>
+                                </div>
+                            </div> 
+                        </div>   
+                        <div class="titre_bouton">
+                        <div class="titre_bouton_commander">Commander</div>
                         </div>
-                    </div>
-                    <!-- Plat 2_________________________ Plat 2 ___________________________ Plat 2 ___________________ -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Parmentier de queue de boeuf</h4>
-                            <p class="acommp_entrees-plats-desseerts"> À la truffe noire sur sa purée de pannais</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">35</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
-                        </div>
-                    </div>
-                        <!--Plat 3_______________________ Plat 3_______________________________ Plat 3___________________  -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Filet de Turbot</h4>
-                            <p class="acommp_entrees-plats-desseerts">Aux agrumes</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">44</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
-                        </div>
-                    </div>
-
-                    <!--  *********************TITRE DU DESSERT**************************** -->
-                    <!--  ***************************************************************** -->
-                    <div class="titre__desert">                        
-                        <style>
-                            @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-                        </style>                           
-                        <h3 class="titre_entrees-plats-desserts">DESSERTS</h3>                        
-                    </div>
-
-                    <!-- Dessert 1_______________________ Dessert 1_____________________________ Dessert 1__________________ -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Paris-Brest</h4>
-                            <p class="acommp_entrees-plats-desseerts">Revisité</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">18</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
-                        </div>
-                    </div>
-                    <!-- Dessert 2_________________________ Dessert 2 ___________________________ Dessert 2 ___________________ -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Macaron au chocolat d'exception</h4>
-                            <p class="acommp_entrees-plats-desseerts">Et glace à la vanille de Madagascar</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">22</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
-                        </div>
-                    </div>
-                        <!-- Dessert 3_______________________ Dessert 3_______________________________ Dessert 3___________________  -->
-                    <div class="conteneur_entrees_plats_desserts">
-                        <div>
-                            <h4 class="descrip_menu-entrees-plats-desserts">Mousse au chocolat</h4>
-                            <p class="acommp_entrees-plats-desseerts">Aux piment d'espelette et à la truffe noire</p>
-                        </div>                        
-                        <div class="entrees_prix" >
-                            <div class="prix_eneuro">23</div><i class="fas fa-euro-sign" id="symboleeuro"></i>
-                        </div>
-                    </div> 
-                    
-                    <div class="titre_bouton">
-                       <div class="titre_bouton_commander">Commander</div>
-                    </div>
-
                  </article>
              </section>
-
              <footer>                            
                 <!-- <img src="ohmyfood@2x.svg"  class="logo_resto__footer" alt="Logo ohmyfood"/> -->
                     <svg  class="logo_resto__footer" width="196" height="34" viewBox="0 0 196 34" fill="none" xmlns="http://www.w3.org/2000/svg">    
