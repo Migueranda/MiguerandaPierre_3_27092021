@@ -1,5 +1,12 @@
+
 body{
     margin: 0px 0px 0px 0px;
+}
+.titre__menu > h1{   
+    font-family: 'Shrikhand', cursive;
+    width: 100%;
+    margin-left: 10%;
+    font-size: 1.7em;
 }
 .bloc_de_page{      
     min-width: 320px;
@@ -7,8 +14,7 @@ body{
     background-color: #f6f6f6;
     font-family: 'Raleway', sans-serif;    
 }
-/* |logo du restaurant| */
- 
+/* |logo du restaurant| */  
 img.logo_resto{
     width: 45%;
     margin-right: 23%;
@@ -36,7 +42,7 @@ img.logo_resto{
     background-size: 100%;
     background-image: url('../MaquettesOhmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
 }
-.menu_titre_icon{   
+.menu_titre_icon_coeur{   
     display: flex;
     padding-right: 5%;
     padding-top: 3%;
@@ -44,11 +50,6 @@ img.logo_resto{
     background-color: #f6f6f6;
     border-radius: 35px 35px 0px 0px;     
     justify-content: space-between;
-}
-.titre__menu h2{
-    font-family: 'Shrikhand', cursive;
-    width: 100%;
-    margin-left: 10%;
 }
 .carte--coeur{
     display:flex;
@@ -65,14 +66,13 @@ img.logo_resto{
 .coeur_plein > .fa{
     background: -webkit-linear-gradient(bottom,#9900ff, #ff66ff);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* color: #9900ff; */
+    -webkit-text-fill-color: transparent;   
 }
 div.coeur_plein svg * {
     fill: url(#svg_coeur_gradient);  
 }
 div.coeur_plein {
-    font-size: 27px;  
+    font-size: 28px;  
     opacity: 0;     
 }  
 div.coeur_plein:active{
@@ -95,9 +95,9 @@ div.coeur_plein:active{
       transform-origin:bottom
     }
 }
-/* |Parti section/article: titre-menu| */
+ /* |Parti section/article: titre-menu| */
 #conteneur_cartes{ 
- margin: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 .titre__entrees, .titre__plats, .titre__desert{
     display: flex;
@@ -135,17 +135,25 @@ div.coeur_plein:active{
     flex-direction: column;    
     width: 300px;   
     padding:10px;     
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .descrip_menu-entrees-plats-desserts{    
     font-size: 1em;
     margin-bottom: 2px;    
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .acommp_entrees-plats-desseerts{
     margin-top: 2px;
-    font-size: 0.8em;    
+    font-size: 0.8em; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;   
 }
-.ellipsis{ 
-    text-overflow: inherit;    
+.ellipsis{     
     overflow: hidden;     
     transition: transform  linear 300ms;
 }
@@ -197,24 +205,26 @@ div.coeur_plein:active{
     height:70px; 
     background-color:#99E2D0;
     border-radius: 0px 14px 14px 0px;     
-    transition: width linear 300ms;
-    
+    transition: width linear 300ms;  
 }
 .div_check_icone{  
     text-align: center; 
     visibility:hidden; 
     transition: visibility linear 300ms ; 
-}
-#check_icone{
-    line-height: 1.9;
-    background-color: white; 
-    color: #99E2D0;
-    /* ______________ */
-    /* margin-left: 25%; */
-    /* ________________ */
     width: 28px;
     height: 28px;
     border-radius: 50%;   
+    transition: transform  linear 300ms;
+    background-color: white; 
+}
+.check_icone {
+    color: #99E2D0;
+    line-height: 1.9 !important;
+    transition: transform  linear 300ms;    
+}
+.check_icone, #check_icone2, #check_icone3, #check_icone4, #check_icone5, #check_icone6, #check_icone7, #check_icone8, #check_icone9{
+    line-height: 1.9;  
+    color: #99E2D0;  
     transition: transform  linear 300ms;
 }
 @keyframes check_check{
@@ -225,7 +235,7 @@ div.coeur_plein:active{
       transform: rotate(160deg);
     }
 }
-/* ______________________________TRANSITIONS-ANIMATIONS-Container_parent____________________________________ */
+  /* ______________________________TRANSITIONS-ANIMATIONS-Container_parent____________________________________ */
 .conteneur_entrees{    
     animation-delay:200ms;    
 }
@@ -240,10 +250,10 @@ div.coeur_plein:active{
 } 
 .menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone {/*Transition qui contient mon check(visto)*/
     visibility: unset; 
-}
-.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > #check_icone{/*Animation du check(visto) avec de keyframes*/    
+} 
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > .check_icone{/*Animation du check(visto) avec de keyframes*/    
     animation: check_check 300ms;  
-}
+}    
 .menu__entre_plat_dessert:hover > .ellipsis {/* transition ellipsis(tros petits points)*/
     text-overflow: ellipsis;  
     white-space: nowrap;    
@@ -289,16 +299,17 @@ footer{
     font-size: 0.9em;
 }
 .info__footer > div{
-    font-size: 1em;
-    margin-left: 5%;
-    line-height: 1.7em;
+font-size: 1em;
+margin-left: 5%;
+line-height: 1.7em;
 }
 .info__footer > div > a:last-child{
-    color: inherit;
-    text-decoration: none;    
+color: inherit;
+text-decoration: none;    
 }
-#icon_footer{
-    margin-right: 3%;
-    font-size: 0.8em;
+.icon_footer{
+margin-right: 3%;
+font-size: 0.8em;
 }  
-
+  
+  

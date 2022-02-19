@@ -1,14 +1,16 @@
 body{
     margin: 0px 0px 0px 0px;
 }
+.titre__menu > h1{
+    font-family: 'Shrikhand', cursive;
+}
 .bloc_de_page{      
     min-width: 320px;
     max-width: initial;
     background-color: #f6f6f6;
     font-family: 'Raleway', sans-serif;    
 }
-/* |logo du restaurant| */
- 
+/* |logo du restaurant| */ 
 img.logo_resto{
     width: 45%;
     margin-right: 23%;
@@ -33,10 +35,10 @@ img.logo_resto{
 }
 .carte-resto__img {    
     height: 220px;
-    background-size: 100%;   
-    background-image: url('../MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    background-size: 100%; 
+    background-image: url('../MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');      
 }
-.menu_titre_icon{   
+.menu_titre_icon_coeur{   
     display: flex;
     padding-right: 5%;
     padding-top: 3%;
@@ -44,35 +46,39 @@ img.logo_resto{
     background-color: #f6f6f6;
     border-radius: 35px 35px 0px 0px;     
     justify-content: space-between;
+    width: 95%;
 }
-.titre__menu h2{
+.titre__menu h1{
     font-family: 'Shrikhand', cursive;
     width: 100%;
-    margin-left: 10%;
+    margin-left: 7%;
+    font-size: 1.7em;
+    margin-right: 10px;
+    white-space: nowrap;
 }
 .carte--coeur{
-    display:flex;
-    justify-content:center;    
-    align-items: center; 
-    padding-right: 5%;      
+    display:flex;   
+    align-items: center;    
+    position: relative;
+    margin-left: 20px;
 }
 .coeur_vide{  
     margin-top: 0px;
-    margin-right: -0px;
+    margin-right: 20px;
     position: absolute;  
     font-size: 25px; 
+    margin-left: 2px;
 }
-.coeur_plein > .fa{
+.fa{
     background: -webkit-linear-gradient(bottom,#9900ff, #ff66ff);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* color: #9900ff; */
+    -webkit-text-fill-color: transparent;    
 }
 div.coeur_plein svg * {
     fill: url(#svg_coeur_gradient);  
 }
 div.coeur_plein {
-    font-size: 27px;  
+    font-size: 29px;    
     opacity: 0;     
 }  
 div.coeur_plein:active{
@@ -99,11 +105,6 @@ div.coeur_plein:active{
 #conteneur_cartes{ 
  margin: 0px 0px 0px 0px;
 }
-.titre__entrees, .titre__plats, .titre__desert{
-    display: flex;
-    justify-content: start;
-    margin-left: 5%;
-}
 .titre_entrees-plats-desserts{
     width: 10%;
     margin-left: 5%;
@@ -120,7 +121,7 @@ div.coeur_plein:active{
     display: flex;     
     height: 70px;    
     margin-bottom: 4%;
-    width: 90%;     
+    width: 97%;     
     align-items: center;
     background-color: #fff;    
     border-radius: 14px 14px 14px 14px;
@@ -134,18 +135,26 @@ div.coeur_plein:active{
     display: flex;
     flex-direction: column;    
     width: 300px;   
-    padding:10px;     
+    padding:10px; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;      
 }
 .descrip_menu-entrees-plats-desserts{    
     font-size: 1em;
-    margin-bottom: 2px;    
+    margin-bottom: 2px;  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;  
 }
 .acommp_entrees-plats-desseerts{
     margin-top: 2px;
-    font-size: 0.8em;    
+    font-size: 0.8em;  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;  
 }
-.ellipsis{ 
-    text-overflow: inherit;    
+.ellipsis{     
     overflow: hidden;     
     transition: transform  linear 300ms;
 }
@@ -154,7 +163,6 @@ div.coeur_plein:active{
     margin-top: 25px; 
     padding-left:14px;      
     width: 40px;
-    padding-left: 45px;
     justify-content: end;    
     padding-right: 1em;    
 }
@@ -198,20 +206,16 @@ div.coeur_plein:active{
     background-color:#99E2D0;
     border-radius: 0px 14px 14px 0px;     
     transition: width linear 300ms;
-    
 }
 .div_check_icone{  
     text-align: center; 
     visibility:hidden; 
     transition: visibility linear 300ms ; 
 }
-#check_icone{
-    line-height: 1.9;
+.check_icone{
+    line-height: 1.9 !important;
     background-color: white; 
     color: #99E2D0;
-    /* ______________ */
-    /* margin-left: 25%; */
-    /* ________________ */
     width: 28px;
     height: 28px;
     border-radius: 50%;   
@@ -241,7 +245,7 @@ div.coeur_plein:active{
 .menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone {/*Transition qui contient mon check(visto)*/
     visibility: unset; 
 }
-.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > #check_icone{/*Animation du check(visto) avec de keyframes*/    
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > .check_icone{/*Animation du check(visto) avec de keyframes*/    
     animation: check_check 300ms;  
 }
 .menu__entre_plat_dessert:hover > .ellipsis {/* transition ellipsis(tros petits points)*/
@@ -297,8 +301,8 @@ footer{
     color: inherit;
     text-decoration: none;    
 }
-#icon_footer{
+.icon_footer{
     margin-right: 3%;
-    font-size: 0.8em;
+    font-size: 0.8em;    
 }  
 
