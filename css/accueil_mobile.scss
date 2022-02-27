@@ -1,0 +1,362 @@
+@media screen and (max-width: 480px){
+
+
+    // mes variable couleur
+    $gradient: linear-gradient(to bottom right,#EE55FF,#9356DC );
+    $couleur_choixfonc:#9356DC;
+    $couleur_choixfonc-hover:#F5EDFF;
+    $couleur_loading:#9356DC;
+    $couleur_nouveau:#99E2D0;
+    $couleur_nouveau_text:#018767;
+    $color_text:#fff;
+    $background_color_header:#F6F6F6;
+
+    body{
+        margin: 0px 0px 0px 0px;    
+    }
+    header{
+        background-color: $background_color_header;
+    }
+
+    /*-------- ANIMATION DE SPINNER------- */
+    @keyframes loading {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    .loading{
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;    
+    }
+    .loading::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+        border: 10px solid #dddddd;
+        border-top-color: $couleur_loading;
+        border-radius: 50%;
+        animation: loading 1s ease infinite;
+    }
+    @keyframes GlisserDepuisLeHaut{
+        0%{
+            transform: translateY(-100%);
+            width: 0px;
+            height: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+        100%{
+            transform: translateY(0);
+            padding: 0px;
+        }
+    }
+    @keyframes CacherSpinner {
+        to {  
+        transform: translateY(0);
+        width:0;
+        height:0;
+        overflow: hidden;
+        }
+    }
+    .loading_container {
+        animation: 1s ease-out 0s 1 CacherSpinner;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;    
+    }
+    /*---------- ANIMATION DE SPINNER---------- */
+    .bloc_de_page{
+        font-family: 'Raleway', sans-serif;
+        min-width: 320px;
+        max-width: initial; 
+    /*--------- Animation du bloc de page-------*/
+        animation: 1s ease-out 0s 1 GlisserDepuisLeHaut ;
+        animation-fill-mode: both;
+        z-index: 1;
+    }
+    /*----------- Logo du restaurant-------------- */
+    .logo_resto__entete{
+        display: flex;
+        justify-content: center;
+    }
+    img.logo_resto__entete{
+        width: 55%;
+        margin-bottom: 1em;
+    }
+    /* localisation */
+    .loca_resto__entete{
+        display: flex;    
+        justify-content: center;
+        height: 10%;
+        align-items: center;
+        width: 100%;
+    }
+    #loca_resto__icon{
+        font-size: 1.2em;   
+        color: #353535;
+        position: absolute;
+        margin-right:180px;
+    }
+    #loca_resto__entete{
+        height: 3em;
+        width: 80%;
+        background-color: #EAEAEA;
+        border: none;
+        width: 100%;
+        box-shadow: 0px 3px 2px inset #CECECE;    
+    }
+    ::placeholder{
+        text-align: center;
+        color:#353535;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-left: 10px;
+    }
+    .titres__entete{
+        text-align: center;  
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20%;
+    }
+    .titreh3__entete{
+        font-weight: normal;
+    }
+    .titre_bouton{
+        border: 3px solid none;
+        border-radius: 40px 40px 40px 40px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;    
+        height: 2.5em;    
+        background-image: $gradient;
+        color: $color_text;
+        width: 16em;
+        padding-top: 5%;
+    }
+    nav > .fonction{
+        margin-bottom: 15%;
+        margin-right: 10px;    
+    }
+    .h2__fonction{
+    margin-left: 1.2em;   
+    }
+    li > a{
+        text-decoration: none;  
+        color: black; 
+        font-weight: bold; 
+        white-space: nowrap;
+        padding-right:10%;    
+    }
+    ol > li{
+        margin: 0 0 0.5rem 0;
+        counter-increment: my-awesome-counter;
+        position: relative;
+        display: block;
+        background-color: #F2F2F2;
+        margin-bottom: 2em;    
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        height: 4.5em;
+        align-items: center;
+        display: flex;    
+        border-radius: 25px 25px 25px 25px;
+        margin-right: 10%;     
+        padding-right: 45px; 
+    }
+    ol > li:hover{    
+        background-color: $couleur_choixfonc-hover;
+        transform: scale(1);   
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    ol {
+        max-width: 350px;
+        counter-reset: my-awesome-counter;
+        list-style: none;
+        padding-left: 45px; 
+        transition: all 450ms;
+        cursor: pointer;    
+    }
+    li {    
+        padding-right: 25px;
+        max-width: 85%;
+    }
+    li:before {
+        content: counter(my-awesome-counter);    
+        position: absolute;
+        --size: 26px;   
+        left: calc(-0 * var(--size) - 8px);
+        line-height: var(--size);
+        width: var(--size);
+        height: var(--size);
+        top: 0;    
+        border-radius: 50%;
+        text-align: center;
+        box-shadow: 1px 1px 0 #999;    
+        background:$couleur_choixfonc ;   
+        color: $color_text;
+        margin-top: 25px;    
+    }
+    #icon__fonction{
+        margin-right: 6%;
+        margin-left: 13%;
+        color:#7E7E7E;
+        margin-left: 15%;
+    }
+    #icon__fonction:hover{
+        color: $couleur_choixfonc;
+    }
+    .cartes-resto{
+        background-color:#F2F2F2;
+        padding-bottom: 15%; 
+        display: flex;
+        flex-direction: column;
+    }
+    .carte__resto{   
+        background-color:$color_text;    
+        border-radius: 1.2em;    
+        margin-left:5%;       
+        width: 90%;
+        box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+        margin-bottom: 5%;
+        text-decoration: none;
+        color: inherit;   
+    }
+    .cartes-resto__img > img{
+        width: 100%;
+        border-radius:15px 15px 0px 0px;  
+        height: 9em;
+        object-fit: cover;     
+    }
+    .carte__resto h4 , p{
+        margin-left: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;    
+    }
+    .restautants_titre{
+        margin: 0px 0px 0px 0px;
+        padding-top: 13%;
+        padding-bottom: 15px;
+        padding-left:8%;
+        font-size: 18px;
+        background-color:#F2F2F2 ;
+        position: relative;
+        font-weight: 750;
+        
+    }
+    .cartes-resto__img{    
+        position: relative;
+        text-align: right;
+    }
+    .nouveau{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        color:$couleur_nouveau_text;
+        background-color: $couleur_nouveau;
+        padding: 3%;
+        font-weight: bold;    
+    }
+    .carte--titre{
+        margin-top: 5%;
+    }
+    .carte__titre__icon{
+        display: flex;
+        justify-content: space-between;    
+        align-items: center;
+    }
+    .container_coeur{
+        padding-bottom: 15px;
+        padding-right: 5px;
+    }
+    .fa{
+        background: -webkit-linear-gradient(bottom,#9900ff, #ff66ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;    
+    }
+    div.coeur_plein svg * {
+        fill: url(#svg_coeur_gradient);  
+    }
+    div.coeur_plein {
+        font-size: 32px;        
+        right: 0;
+        margin-right: 33px;
+        opacity: 0;  
+        z-index: 10;
+        position: absolute;
+    }  
+    div.coeur_plein:hover{
+        animation: 300ms coeur ease-out forwards;
+    }  
+    @keyframes coeur{
+        0%{
+        opacity: 0;
+        transform: scale(0.1);    
+        transform-origin:bottom;
+        }   
+        50%{
+        opacity: 1;
+        transform: scale(0.8);
+        transform-origin:bottom
+        }
+        100%{
+        opacity: 1;
+        transform: scale(1);
+        transform-origin:bottom
+        }
+    }
+    .coeur_vide{    
+        margin-right: 34.8px;
+        font-size: 1.8em;
+        margin-top: 2.5px;
+        font-weight:initial;       
+        position: absolute;        
+        right: 0;      
+    }
+    p{
+        padding-bottom: 15px;
+    }
+    h2{
+        margin-left: 5%;
+        padding-top: 10%;
+    }
+    footer{
+        background-color: #353535;
+        padding-bottom: 7%;
+    }
+    .logo_resto__footer > path{
+        fill: $color_text;
+    }
+    .logo_resto__footer{
+        width: 25%; 
+        margin-left: 5%;
+        margin-top: 5%;
+        margin-bottom: 2%;
+    }
+    .info__footer {
+        color: $color_text;
+        font-size: 0.9em;
+    }
+    .info__footer > div{
+        font-size: 1em;
+        line-height: 1.7em;
+        margin-left: 5%;
+    }
+    .info__footer > div > a:last-child{
+        text-decoration: none;
+        color: inherit;
+    }
+    #icon_footer{
+        margin-right: 3%;
+        font-size: 0.8em;
+    }  
+}
+
+
+
+
+
+
+
+
+

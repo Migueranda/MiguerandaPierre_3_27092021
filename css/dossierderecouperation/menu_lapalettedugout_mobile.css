@@ -1,0 +1,308 @@
+body{
+    margin: 0px 0px 0px 0px;
+}
+.titre__menu > h1{
+    font-family: 'Shrikhand', cursive;
+}
+.bloc_de_page{      
+    min-width: 320px;
+    max-width: initial;
+    background-color: #f6f6f6;
+    font-family: 'Raleway', sans-serif;    
+}
+/* |logo du restaurant| */ 
+img.logo_resto{
+    width: 45%;
+    margin-right: 23%;
+}
+.logo_resto__entete{
+    display: flex;
+    justify-content: center; 
+    justify-content: space-between;
+    align-items: center;
+}
+#fleche_retour_accueil{
+    margin-left: 1rem;
+    text-decoration: none;    
+    color: black;
+}
+/* |carte du restaurant| */
+.carte-resto{    
+    display: flex;
+    padding-bottom: 15%;
+    flex-direction: column;
+    background-color:#F2F2F2;
+}
+.carte-resto__img {    
+    height: 220px;
+    background-size: 100%; 
+    background-image: url('../MaquettesOhmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');      
+}
+.menu_titre_icon_coeur{   
+    display: flex;
+    padding-right: 5%;
+    padding-top: 3%;
+    margin-top: -30px;
+    background-color: #f6f6f6;
+    border-radius: 35px 35px 0px 0px;     
+    justify-content: space-between;
+    width: 95%;
+}
+.titre__menu h1{
+    font-family: 'Shrikhand', cursive;
+    width: 100%;
+    margin-left: 7%;
+    font-size: 1.7em;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+.carte--coeur{
+    display:flex;   
+    align-items: center;    
+    position: relative;
+    margin-left: 20px;
+}
+.coeur_vide{  
+    margin-top: 0px;
+    margin-right: 20px;
+    position: absolute;  
+    font-size: 25px; 
+    margin-left: 2px;
+}
+.fa{
+    background: -webkit-linear-gradient(bottom,#9900ff, #ff66ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+div.coeur_plein svg * {
+    fill: url(#svg_coeur_gradient);  
+}
+div.coeur_plein {
+    font-size: 29px;    
+    opacity: 0;     
+}  
+div.coeur_plein:active{
+    animation: 300ms coeur ease-out forwards;
+}  
+@keyframes coeur{
+    0%{
+      opacity: 0;
+      transform: scale(0.1);    
+      transform-origin:bottom;
+    }   
+    50%{
+      opacity: 1;
+      transform: scale(0.8);
+      transform-origin:bottom
+    }
+    100%{
+      opacity: 1;
+      transform: scale(1);
+      transform-origin:bottom
+    }
+}
+/* |Parti section/article: titre-menu| */
+#conteneur_cartes{ 
+ margin: 0px 0px 0px 0px;
+}
+.titre_entrees-plats-desserts{
+    width: 10%;
+    margin-left: 5%;
+    font-weight: normal;
+    border-color: #99e2d0;
+    border-bottom-style: solid;
+}
+.container_parent_entrees{
+    display: flex;
+    justify-content:center;
+    margin: 10px 10px 10px 10px;
+}
+.menu__entre_plat_dessert{
+    display: flex;     
+    height: 70px;    
+    margin-bottom: 4%;
+    width: 97%;     
+    align-items: center;
+    background-color: #fff;    
+    border-radius: 14px 14px 14px 14px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation:entree_plat_dessert ease-in ; 
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    flex-wrap: nowrap;   
+}
+.cont_descrip_acomp{
+    display: flex;
+    flex-direction: column;    
+    width: 300px;   
+    padding:10px; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;      
+}
+.descrip_menu-entrees-plats-desserts{    
+    font-size: 1em;
+    margin-bottom: 2px;  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;  
+}
+.acommp_entrees-plats-desseerts{
+    margin-top: 2px;
+    font-size: 0.8em;  
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;  
+}
+.ellipsis{     
+    overflow: hidden;     
+    transition: transform  linear 300ms;
+}
+.entrees_prix{    
+    display: flex; 
+    margin-top: 25px; 
+    padding-left:14px;      
+    width: 40px;
+    justify-content: end;    
+    padding-right: 1em;    
+}
+.prix_eneuro{     
+    padding-right:2px;     
+}
+.prix_eneuro, .symboleeuro{
+    margin-left:2px;   
+    font-size: 0.9em;    
+    font-weight: bold;    
+    display: inline; 
+}
+@keyframes entree_plat_dessert{
+    0%{
+      transform: scaleY(0.9);
+      opacity:0;
+    }
+    25%{
+  
+      opacity:0;
+    }
+    50%{
+  
+      opacity:0.30;
+    }
+    75%{
+  
+      opacity:0.60;
+    }
+    100%{
+       transform: scaleY(1);
+      opacity:1;
+    }
+}
+.container_check_icone{
+    display:flex ;
+    justify-content: center;
+    align-items: center; 
+    width:0%;
+    height:70px; 
+    background-color:#99E2D0;
+    border-radius: 0px 14px 14px 0px;     
+    transition: width linear 300ms;
+}
+.div_check_icone{  
+    text-align: center; 
+    visibility:hidden; 
+    transition: visibility linear 300ms ; 
+}
+.check_icone{
+    line-height: 1.9 !important;
+    background-color: white; 
+    color: #99E2D0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;   
+    transition: transform  linear 300ms;
+}
+@keyframes check_check{
+    0%{
+      transform: rotate(-160deg);
+    }
+    100%{
+      transform: rotate(160deg);
+    }
+}
+/* ______________________________TRANSITIONS-ANIMATIONS-Container_parent____________________________________ */
+.conteneur_entrees{    
+    animation-delay:200ms;    
+}
+.conteneur_plats{
+    animation-delay:400ms; 
+}
+.conteneur_desserts{
+    animation-delay:600ms;
+}
+.menu__entre_plat_dessert:hover > .container_check_icone { /*Transition avec bacground color mint*/    
+    width: 120px;
+} 
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone {/*Transition qui contient mon check(visto)*/
+    visibility: unset; 
+}
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > .check_icone{/*Animation du check(visto) avec de keyframes*/    
+    animation: check_check 300ms;  
+}
+.menu__entre_plat_dessert:hover > .ellipsis {/* transition ellipsis(tros petits points)*/
+    text-overflow: ellipsis;  
+    white-space: nowrap;    
+} 
+.titre_bouton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;    
+    margin: 15% 0% 20% 0%;
+}
+.titre_bouton_commander{
+    width: 50%;
+    height: 2.5em;
+    display: flex;
+    color: white;    
+    padding: 2% 0% 2% 0%;
+    border: 3px solid;
+    font-weight: 700;  
+    align-items: center;
+    font-size: 1.1em;
+    border-radius:10rem; 
+    justify-content:center;
+    background-image: linear-gradient(to bottom right,#EE55FF,#9356DC );
+}
+.titre_bouton > h5{
+    padding-bottom: 55px;
+}
+footer{
+    padding-bottom: 7%;
+    background-color: #353535;
+}
+.logo_resto__footer > path{
+    fill: #fff;
+}
+.logo_resto__footer{
+    width: 25%; 
+    margin-left:5%;
+    margin-top: 5%;
+    margin-bottom:2%;
+}
+.info__footer {
+    color: #fff;
+    font-size: 0.9em;
+}
+.info__footer > div{
+    font-size: 1em;
+    margin-left: 5%;
+    line-height: 1.7em;
+}
+.info__footer > div > a:last-child{
+    color: inherit;
+    text-decoration: none;    
+}
+.icon_footer{
+    margin-right: 3%;
+    font-size: 0.8em;    
+}  
+

@@ -1,0 +1,376 @@
+@media screen and (min-width: 1024px){
+
+    // mes variable couleur
+    $gradient: -webkit-linear-gradient(bottom,#EE55FF,#9356DC );
+    $couleur_principal:#9356DC;
+    $background_color_header:#F6F6F6;
+    $couleur_text:#fff;
+    $background-color_footer:#353535;
+    $couleur_nouveau:#99E2D0;
+    $couleur_nouveau_text:#018767;    
+
+    body{
+        margin: 0px 0px 0px 0px; 
+            
+    }
+    header{
+        background-color: $background_color_header;
+    }
+    // /*-------- ANIMATION DE SPINNER------- */
+
+    @keyframes loading {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    .loading{
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;    
+    }
+    .loading::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+        border: 10px solid #dddddd;    
+        border-top-color: $couleur_principal;
+        border-radius: 50%;
+        animation: loading 1s ease infinite;    
+    }
+    @keyframes GlisserDepuisLeHaut{
+        0%{
+            transform: translateY(-100%);
+            width: 0px;
+            height: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+        100%{
+            transform: translateY(0);
+            padding: 0px;
+        }
+    }
+    @keyframes CacherSpinner {
+        to {  
+        transform: translateY(0);
+        width:0;
+        height:0;
+        overflow: hidden;
+        }
+    }
+    .loading_container {
+        animation: 1s ease-out 0s 1 CacherSpinner;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;    
+    }
+    // /*---------- ANIMATION DE SPINNER---------- */
+    .bloc_de_page{
+        font-family: 'Raleway', sans-serif;        
+        max-width: initial; 
+    /*--------- Animation du bloc de page-------*/
+        animation: 1s ease-out 0s 1 GlisserDepuisLeHaut ;
+        animation-fill-mode: both;
+        z-index: 1;
+    }
+    /*----------- Logo du restaurant-------------- */
+    .logo_resto__entete{
+        display: flex;
+        justify-content: center;
+    }
+    img.logo_resto__entete{   
+        margin-bottom: 1em;        
+        margin-top: 2%;
+        width: 17%;
+    }
+
+    // /* localisation */
+    .loca_resto__entete{
+        display: flex;    
+        justify-content: center;
+        height: 10%;
+        align-items: center;
+        width: 100%;
+    }
+    #loca_resto__icon{
+        font-size: 1.2em;     
+        color: #353535;
+        position: absolute;
+        margin-right:180px;
+    }
+    #loca_resto__entete{    
+        height: 5em;
+        width: 80%;    
+        background-color: #EAEAEA;
+        border: none;
+        width: 100%;   
+        box-shadow: 0px 3px 2px inset #cecece;       
+        font-size: 1em;
+    }
+    ::placeholder{
+        text-align: center;
+        color:$background-color_footer;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-left: 10px;
+    }
+    .titres__entete{
+        text-align: center;  
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        padding-bottom: 15%;        
+        padding-bottom: 8%      
+    }
+    .titreh3__entete{
+        margin-top: 5px;
+        font-weight: normal;
+    }
+    .titre_bouton{
+        border: 2px solid none;    
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;           
+        background:$gradient;    
+        color: $couleur_text;        
+        padding: 3%;
+        align-items: center;
+        font-weight: 600;
+        font-size: 1em;      
+        margin-top: 2%;
+
+    }
+    nav > .fonction{
+        margin-bottom: 15%;
+        margin-right: 10px; 
+        margin-left: 25%;   
+    }
+    .h2__fonction{      
+        margin-bottom: 2.5em;
+        margin-right: 3em;
+        text-align: center;
+    }
+    li > a{
+        text-decoration: none;  
+        color: black; 
+        font-weight: bold; 
+        white-space: nowrap;        
+        margin-left: 20px; 
+    }
+    ol > li{
+        margin: 0 0 0.5rem 0;
+        counter-increment: my-awesome-counter;
+        position: relative;
+        display: block;
+        background-color: #F2F2F2;
+        margin-bottom: 2em;    
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;       
+        align-items: center;
+        display: flex;    
+        border-radius: 10px 10px 10px 10px;        
+        margin-right:30px ;
+        height: 8.8em;
+        background: #F2F2F2;
+    }
+    ol > li:hover{ 
+        background-color:#F5EDFF;
+        transform: scale(1);   
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+    ol {
+        counter-reset: my-awesome-counter;
+        list-style: none;    
+        transition: all 450ms;
+        cursor: pointer;   
+        display: flex;    
+        justify-content: space-evenly;
+        margin-bottom: 7%;
+    }
+    li {    
+        padding-right: 25px;
+        max-width: 85%;
+    }
+    li:before {
+        content: counter(my-awesome-counter); 
+        line-height: 1.7;    
+        width: 30px;       
+        top: 0; 
+        border-radius: 50%;
+        text-align: center;    
+        color:$couleur_text;        
+        height: 1.7em;        
+        margin-left: -10px; 
+        font-size:1.1em;
+        font-weight: 800;
+        background-color: $couleur_principal;
+    }
+
+    #icon__fonction{   
+        margin-left: 17px;
+        color:#7E7E7E;   
+        font-size: 21px;
+    }
+    #icon__fonction:hover{   
+        color: $couleur_principal;
+    }
+    .cartes-resto{
+        background-color:#F2F2F2;
+        padding-bottom: 15%; 
+        display: flex;        
+        align-items: center;       
+        flex-direction: row;       
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .restautants_titre{
+        margin: 0px 0px 0px 0px;
+        padding-top: 10%;
+        padding-bottom: 40px;
+        padding-left:8%;
+        font-size: 28px;
+        background-color:#F2F2F2 ;
+        position: relative;        
+    }
+    .carte__resto{   
+        background-color:$couleur_text;    
+        border-radius: 1.2em;          
+        box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+        margin-bottom: 5%;
+        text-decoration: none;
+        color: inherit;    
+        width: 40%;       
+    }
+    .cartes-resto__img > img{
+        width: 100%;
+        border-radius:15px 15px 0px 0px;  
+        height: 9em;
+        object-fit: cover;        
+        height: 15em;         
+    }
+    .carte__resto h4 , p{        
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;          
+        margin-left: 20%;
+        font-size: 20px;
+
+    }
+    .cartes-resto__img{    
+        position: relative;
+        text-align: right;
+    }
+    .nouveau{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        color:$couleur_nouveau_text;
+        background-color:$couleur_nouveau;
+        padding: 3%;
+        font-weight: bold; 
+        border-radius: 5px 5px 5px 5px;   
+    }
+    .carte--titre{
+        margin-top: 5%;
+    }
+    .carte__titre__icon{
+        display: flex;
+        justify-content: space-between;    
+        align-items: center;
+    }
+    .container_coeur{
+        display: flex;
+        padding-right: 15px;     
+    }
+    .fa{   
+        background:$gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;    
+    }
+    div.coeur_plein svg * {
+        fill: url(#svg_coeur_gradient);  
+    }
+    div.coeur_plein {
+        font-size: 33px;    
+        margin-top:26.7px;        
+        opacity: 0;  
+        z-index: 10;  
+        right: 0;     
+        position:relative;        
+        margin-left: -31.8px;
+    }  
+    div.coeur_plein:hover{
+        animation: 300ms coeur ease-out forwards;
+    }  
+    @keyframes coeur{
+        0%{
+        opacity: 0;
+        transform: scale(0.1);    
+        transform-origin:bottom;
+        }   
+        50%{
+        opacity: 1;
+        transform: scale(0.8);
+        transform-origin:bottom
+        }
+        100%{
+        opacity: 1;
+        transform: scale(1);
+        transform-origin:bottom
+        }
+    }
+    .coeur_vide{        
+        font-size: 1.8em;
+        margin-top: 30px;
+        font-weight:initial;       
+        position: relative;        
+        right: 0;     
+        margin-left:-40px;
+    }
+    p{
+        padding-bottom: 15px;
+    }
+    h2{
+        margin-left: 5%;        
+        font-size: 28px
+    }
+    footer{
+        background-color: $background-color_footer;        
+    }
+    .logo_resto__footer > path{
+        fill: $couleur_text;
+    }
+    .logo_resto__footer{
+        width: 25%;        
+        margin-top: 3%;
+        margin-bottom: 2%;
+    }
+    .info__footer {
+        color: $couleur_text;
+        font-size: 0.9em;        
+        display: flex;        
+        padding-bottom: 5%;
+    }
+    .info__footer > div{
+        font-size: 1em;
+        line-height: 1.7em;
+        margin-left: 5%;       
+        width: 200px;
+    }
+    .info__footer > div > a:last-child{
+        text-decoration: none;
+        color: inherit;        
+    }
+    #icon_footer{        
+        font-size: 0.8em;      
+        margin-right: 1%;
+    }  
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,328 @@
+@media all and (min-width: 481px) and (max-width: 1023px){
+
+// variable couleur
+$gradient: -webkit-linear-gradient(bottom,#EE55FF,#9356DC );
+$couleur_nouveau:#99E2D0;
+$couleur_nouveau_text:#018767;
+$color_text:#fff;
+$background_color_header:#F6F6F6;
+$background-color_footer:#353535;
+
+body{
+  margin: 0px 0px 0px 0px;
+}
+.titre__menu > h1{
+  font-family: 'Shrikhand', cursive;
+} 
+.bloc_de_page{      
+  min-width: 320px;
+  max-width: initial;
+  background-color: $background_color_header;
+  font-family: 'Raleway', sans-serif;    
+}
+/* |logo du restaurant| */
+
+img.logo_resto{ 
+  width: 25%;
+  margin-right: 36%;  
+}
+.logo_resto__entete{
+  display: flex;
+  justify-content: center; 
+  justify-content: space-between;
+  align-items: center;
+}
+#fleche_retour_accueil{
+  margin-left: 1rem;
+  text-decoration: none;    
+  color: black;
+}
+/* |carte du restaurant| */
+.carte-resto{    
+  display: flex;
+  padding-bottom: 15%;
+  flex-direction: column;
+  background-color:#F2F2F2;
+}
+.carte-resto__img {  
+  height: 320px;
+  background-size: 100%;
+  background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+}
+.menu_titre_icon_coeur{   
+  display: flex;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-top: 3%;
+  margin-top: -30px;
+  background-color: $background_color_header;
+  border-radius: 35px 35px 0px 0px;     
+  justify-content: space-between;
+}
+.titre__menu h1{ 
+  font-family: 'Shrikhand', cursive;
+  width: 100%;
+  margin-left: 7%;
+  font-size: 1.7em;
+  margin-right: 10px;
+  white-space: nowrap;
+
+}
+.carte--coeur{
+  display:flex;
+  justify-content:center;    
+  align-items: center; 
+  padding-right: 5%;      
+}
+.coeur_vide{  
+  margin-top: 0px;
+  margin-right: -0px;
+  position: absolute;  
+  font-size: 30px; 
+}
+.coeur_plein > .fa{ 
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+}
+div.coeur_plein svg * {
+  fill: url(#svg_coeur_gradient);  
+}
+div.coeur_plein {
+  font-size: 35px;  
+  opacity: 0;     
+}  
+div.coeur_plein:active{
+  animation: 300ms coeur ease-out forwards;
+}  
+@keyframes coeur{
+  0%{
+    opacity: 0;
+    transform: scale(0.1);    
+    transform-origin:bottom;
+  }   
+  50%{
+    opacity: 1;
+    transform: scale(0.8);
+    transform-origin:bottom
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+    transform-origin:bottom
+  }
+}
+#conteneur_cartes{ 
+margin: 0px 0px 0px 0px;
+}
+.titre__entrees, .titre__plats, .titre__desert{
+  display: flex;
+  justify-content: start;
+  margin-left: 17%;
+  margin-bottom: -10px;
+}
+.titre_entrees-plats-desserts{
+  width: 10%;
+  margin-left: 5%;
+  font-weight: normal;
+  border-color: $couleur_nouveau;
+  border-bottom-style: solid;
+}
+.container_parent_entrees{
+  display: flex;
+  justify-content:center;
+  margin: 10px 10px 10px 10px;
+}
+.menu__entre_plat_dessert{
+  display: flex;     
+  height: 100px;    
+  margin-bottom: 4%;  
+  width: 60%;  
+  align-items: center;   
+  background-color: $color_text;    
+  border-radius: 14px 14px 14px 14px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation:entree_plat_dessert ease-in ; 
+  animation-duration: 1.5s;
+  animation-fill-mode: backwards;
+  flex-wrap: nowrap;   
+}
+.cont_descrip_acomp{
+  display: flex;
+  flex-direction: column; 
+  width: 80%;
+  padding: 20px;  
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;   
+}
+.descrip_menu-entrees-plats-desserts{    
+  font-size: 1.2em;
+  margin-bottom: 2px;   
+  text-overflow: ellipsis;
+  white-space: nowrap; 
+  overflow: hidden; 
+}
+.acommp_entrees-plats-desseerts{
+  margin-top: 2px;
+  font-size: 1em;  
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; 
+}
+.ellipsis{    
+  overflow: hidden;     
+  transition: transform  linear 300ms;
+}
+.entrees_prix{    
+  display: flex; 
+  margin-top: 25px; 
+  padding-left:14px;      
+  width: 40px;
+  padding-left: 45px;
+  justify-content: end;    
+  padding-right: 1.7em;    
+}
+.prix_eneuro{     
+  padding-right:2px;     
+}
+.prix_eneuro, .symboleeuro{
+  margin-left:2px;   
+  font-size: 1em;    
+  font-weight: bold;    
+  display: inline; 
+}
+@keyframes entree_plat_dessert{
+  0%{
+    transform: scaleY(0.9);
+    opacity:0;
+  }
+  25%{
+
+    opacity:0;
+  }
+  50%{
+
+    opacity:0.30;
+  }
+  75%{
+
+    opacity:0.60;
+  }
+  100%{
+     transform: scaleY(1);
+    opacity:1;
+  }
+}
+.container_check_icone{
+  display:flex ;
+  justify-content: center;
+  align-items: center; 
+  width:0%;
+  height:100px; 
+  background-color:$couleur_nouveau;
+  border-radius: 0px 14px 14px 0px;     
+  transition: width linear 300ms;
+  
+}
+.div_check_icone{  
+  text-align: center; 
+  visibility:hidden; 
+  transition: visibility linear 300ms ; 
+}
+.check_icone{
+  line-height: 1.9 !important;
+  background-color: white; 
+  color: $couleur_nouveau;    
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;   
+  transition: transform  linear 300ms;
+}
+@keyframes check_check{
+  0%{
+    transform: rotate(-160deg);
+  }
+  100%{
+    transform: rotate(160deg);
+  }
+}
+/* ______________________________TRANSITIONS-ANIMATIONS-Container_parent____________________________________ */
+.conteneur_entrees{    
+  animation-delay:200ms;    
+}
+.conteneur_plats{
+  animation-delay:400ms; 
+}
+.conteneur_desserts{
+  animation-delay:600ms;
+}
+.menu__entre_plat_dessert:hover > .container_check_icone { /*Transition avec bacground color mint*/    
+  width: 120px;
+} 
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone {/*Transition qui contient mon check(visto)*/
+  visibility: unset; 
+}
+.menu__entre_plat_dessert:hover > .container_check_icone > .div_check_icone > .check_icone{/*Animation du check(visto) avec de keyframes*/    
+  animation: check_check 300ms;  
+}
+.menu__entre_plat_dessert:hover > .ellipsis {/* transition ellipsis(tros petits points)*/
+  text-overflow: ellipsis;  
+  white-space: nowrap;    
+} 
+.titre_bouton{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20%;    
+  margin: 15% 0% 20% 0%;
+}
+.titre_bouton_commander{
+  width: 35%;
+  height: 2.5em;
+  display: flex;
+  color: $color_text;    
+  padding: 2% 0% 2% 0%;
+  border: 3px solid;
+  font-weight: 600;  
+  align-items: center;
+  font-size: 1.1em;  
+  justify-content:center;
+  background: $gradient;
+  border: none;  
+  border-radius: 14px 14px 14px 14px;
+}
+.titre_bouton > h5{
+  padding-bottom: 55px;
+}
+footer{
+  padding-bottom: 7%;
+  background-color: $background-color_footer;
+}
+.logo_resto__footer > path{
+  fill: $color_text;
+}
+.logo_resto__footer{
+  width: 25%; 
+  margin-left:5%;
+  margin-top: 5%;
+  margin-bottom:2%;
+}
+.info__footer {
+  color: $color_text;
+  font-size: 0.9em;
+}
+.info__footer > div{
+  font-size: 1em;
+  margin-left: 5%;
+  line-height: 1.7em;
+}
+.info__footer > div > a:last-child{
+  color: inherit;
+  text-decoration: none;    
+}
+.icon_footer{
+  margin-right: 3%;
+  font-size: 0.8em;
+}  
+
+}

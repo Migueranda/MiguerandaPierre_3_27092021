@@ -1,4 +1,4 @@
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 481px) and (max-width: 1023px) {
   body {
     margin: 0px 0px 0px 0px;
   }
@@ -7,6 +7,7 @@
     background-color: #F6F6F6;
   }
 
+  /*-------- ANIMATION DE SPINNER------- */
   @keyframes loading {
     to {
       transform: rotate(1turn);
@@ -56,8 +57,10 @@
     justify-content: center;
   }
 
+  /*---------- ANIMATION DE SPINNER---------- */
   .bloc_de_page {
     font-family: "Raleway", sans-serif;
+    min-width: 320px;
     max-width: initial;
     /*--------- Animation du bloc de page-------*/
     animation: 1s ease-out 0s 1 GlisserDepuisLeHaut;
@@ -73,10 +76,10 @@
 
   img.logo_resto__entete {
     margin-bottom: 1em;
-    margin-top: 2%;
-    width: 17%;
+    width: 25%;
   }
 
+  /* localisation */
   .loca_resto__entete {
     display: flex;
     justify-content: center;
@@ -99,7 +102,6 @@
     border: none;
     width: 100%;
     box-shadow: 0px 3px 2px inset #cecece;
-    font-size: 1em;
   }
 
   ::placeholder {
@@ -117,7 +119,6 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 15%;
-    padding-bottom: 8%;
   }
 
   .titreh3__entete {
@@ -129,25 +130,23 @@
     border: 2px solid none;
     border-radius: 20px 20px 20px 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 3.5em;
     background: -webkit-linear-gradient(bottom, #EE55FF, #9356DC);
     color: #fff;
-    padding: 3%;
+    width: 16em;
+    padding-top: 35px;
     align-items: center;
     font-weight: 600;
-    font-size: 1em;
-    margin-top: 2%;
   }
 
   nav > .fonction {
     margin-bottom: 15%;
     margin-right: 10px;
-    margin-left: 25%;
   }
 
   .h2__fonction {
-    margin-bottom: 2.5em;
-    margin-right: 3em;
-    text-align: center;
+    margin-left: 5em;
+    margin-bottom: 4%;
   }
 
   li > a {
@@ -155,23 +154,22 @@
     color: black;
     font-weight: bold;
     white-space: nowrap;
-    margin-left: 20px;
+    padding-right: 10%;
+    margin-left: 10%;
+    font-size: 1.1em;
   }
 
   ol > li {
     margin: 0 0 0.5rem 0;
     counter-increment: my-awesome-counter;
     position: relative;
-    display: block;
     background-color: #F2F2F2;
     margin-bottom: 2em;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 7.5em;
     align-items: center;
     display: flex;
     border-radius: 10px 10px 10px 10px;
-    margin-right: 30px;
-    height: 8.8em;
-    background: #F2F2F2;
   }
 
   ol > li:hover {
@@ -183,11 +181,9 @@
   ol {
     counter-reset: my-awesome-counter;
     list-style: none;
+    padding-left: 13%;
     transition: all 450ms;
     cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 7%;
   }
 
   li {
@@ -198,56 +194,54 @@
   li:before {
     content: counter(my-awesome-counter);
     line-height: 1.7;
-    width: 30px;
+    width: 37px;
     top: 0;
     border-radius: 50%;
     text-align: center;
     color: #fff;
     height: 1.7em;
-    margin-left: -10px;
-    font-size: 1.1em;
+    margin-left: -17px;
+    font-size: 1.3em;
     font-weight: 800;
     background-color: #9356DC;
   }
 
   #icon__fonction {
-    margin-left: 17px;
     color: #7E7E7E;
-    font-size: 21px;
+    margin-left: 16%;
+    font-size: 22px;
   }
 
   #icon__fonction:hover {
     color: #9356DC;
   }
 
+  .restautants_titre {
+    padding-left: 10%;
+    padding-top: 10%;
+    padding-bottom: 3%;
+    margin-bottom: -7px;
+    background-color: #F2F2F2;
+    margin: 150px 0px 0px 0px;
+  }
+
   .cartes-resto {
     background-color: #F2F2F2;
     padding-bottom: 15%;
     display: flex;
-    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
-  .restautants_titre {
-    margin: 0px 0px 0px 0px;
-    padding-top: 10%;
-    padding-bottom: 40px;
-    padding-left: 8%;
-    font-size: 28px;
-    background-color: #F2F2F2;
-    position: relative;
-  }
-
   .carte__resto {
     background-color: #fff;
     border-radius: 1.2em;
+    width: 40%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin-bottom: 5%;
     text-decoration: none;
     color: inherit;
-    width: 40%;
   }
 
   .cartes-resto__img > img {
@@ -255,15 +249,13 @@
     border-radius: 15px 15px 0px 0px;
     height: 9em;
     object-fit: cover;
-    height: 15em;
   }
 
   .carte__resto h4, p {
+    margin-left: 5%;
     margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
-    margin-left: 20%;
-    font-size: 20px;
   }
 
   .cartes-resto__img {
@@ -294,7 +286,7 @@
 
   .container_coeur {
     display: flex;
-    padding-right: 15px;
+    padding-right: 10px;
   }
 
   .fa {
@@ -308,13 +300,13 @@
   }
 
   div.coeur_plein {
-    font-size: 33px;
-    margin-top: 26.7px;
+    font-size: 32.6px;
+    margin-top: -3px;
     opacity: 0;
     z-index: 10;
     right: 0;
+    margin-left: -30.7px;
     position: relative;
-    margin-left: -31.8px;
   }
 
   div.coeur_plein:hover {
@@ -340,11 +332,9 @@
   }
   .coeur_vide {
     font-size: 1.8em;
-    margin-top: 30px;
     font-weight: initial;
     position: relative;
     right: 0;
-    margin-left: -40px;
   }
 
   p {
@@ -353,11 +343,12 @@
 
   h2 {
     margin-left: 5%;
-    font-size: 28px;
+    padding-top: 10%;
   }
 
   footer {
     background-color: #353535;
+    padding-bottom: 7%;
   }
 
   .logo_resto__footer > path {
@@ -365,16 +356,16 @@
   }
 
   .logo_resto__footer {
-    width: 25%;
-    margin-top: 3%;
-    margin-bottom: 2%;
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 1%;
   }
 
   .info__footer {
     color: #fff;
     font-size: 0.9em;
     display: flex;
-    padding-bottom: 5%;
   }
 
   .info__footer > div {
@@ -390,9 +381,9 @@
   }
 
   #icon_footer {
+    margin-right: 3%;
     font-size: 0.8em;
-    margin-right: 1%;
   }
 }
 
-/*# sourceMappingURL=accueil_desktop.css.map */
+/*# sourceMappingURL=accueil_tablette.css.map */

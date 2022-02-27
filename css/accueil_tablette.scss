@@ -1,0 +1,402 @@
+@media screen and (min-width: 481px) and (max-width: 1023px){
+    
+    // variable couleur
+    $gradient: -webkit-linear-gradient(bottom,#EE55FF,#9356DC );
+    $couleur_nouveau:#99E2D0;
+    $couleur_nouveau_text:#018767;
+    $color_text:#fff;
+    $background_color_header:#F6F6F6;
+    $background-color_footer:#353535;
+    $couleur_principal:#9356DC;    
+   
+    body{
+        margin: 0px 0px 0px 0px;      
+    }
+    header{
+        background-color: $background_color_header;
+    }
+
+    /*-------- ANIMATION DE SPINNER------- */
+    @keyframes loading {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    .loading{
+        display: flex;
+        justify-content: center;
+        padding-top: 0px;    
+    }
+    .loading::after{
+        content: "";
+        width: 50px;
+        height: 50px;
+        border: 10px solid #dddddd;    
+        border-top-color:$couleur_principal;
+        border-radius: 50%;
+        animation: loading 1s ease infinite;    
+    }
+    @keyframes GlisserDepuisLeHaut{
+        0%{
+            transform: translateY(-100%);
+            width: 0px;
+            height: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+        100%{
+            transform: translateY(0);
+            padding: 0px;
+        }
+    }
+    @keyframes CacherSpinner {
+        to {  
+        transform: translateY(0);
+        width:0;
+        height:0;
+        overflow: hidden;
+        }
+    }
+
+    .loading_container {
+        animation: 1s ease-out 0s 1 CacherSpinner;
+        animation-fill-mode: forwards;
+        display: flex;
+        justify-content: center;    
+    }
+    /*---------- ANIMATION DE SPINNER---------- */
+
+    .bloc_de_page{
+        font-family: 'Raleway', sans-serif;
+        min-width: 320px;
+        max-width: initial; 
+    /*--------- Animation du bloc de page-------*/
+        animation: 1s ease-out 0s 1 GlisserDepuisLeHaut ;
+        animation-fill-mode: both;
+        z-index: 1;
+    }
+    /*----------- Logo du restaurant-------------- */
+    .logo_resto__entete{
+        display: flex;
+        justify-content: center;
+    }
+
+    img.logo_resto__entete{   
+        margin-bottom: 1em;
+        width: 25%;
+    }
+
+    /* localisation */
+    .loca_resto__entete{
+        display: flex;    
+        justify-content: center;
+        height: 10%;
+        align-items: center;
+        width: 100%;
+    }
+
+    #loca_resto__icon{
+        font-size: 1.2em;     
+        color: #353535;
+        position: absolute;
+        margin-right:180px;
+    }
+
+    #loca_resto__entete{    
+        height: 5em;
+        width: 80%;    
+        background-color:#EAEAEA;
+        border: none;
+        width: 100%;   
+        box-shadow:0px 3px 2px inset #cecece;
+    }
+
+    ::placeholder{
+        text-align: center;
+        color:$background-color_footer;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-left: 10px;
+    }
+
+    .titres__entete{
+        text-align: center;  
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15%;
+    }
+    
+    .titreh3__entete{
+        margin-top: 5px;
+        font-weight: normal;
+    }
+
+    .titre_bouton{
+        border: 2px solid none;    
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;     
+        height: 3.5em;    
+        background:$gradient;    
+        color: $color_text;
+        width: 16em;   
+        padding-top: 35px;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    nav > .fonction{
+        margin-bottom: 15%;
+        margin-right: 10px;    
+    }
+
+    .h2__fonction{     
+    margin-left: 5em;
+    margin-bottom: 4%;
+    }
+
+    li > a{
+        text-decoration: none;  
+        color: black; 
+        font-weight: bold; 
+        white-space: nowrap;
+        padding-right:10%;  
+        margin-left: 10%; 
+        font-size: 1.1em; 
+    }
+
+    ol > li{
+        margin: 0 0 0.5rem 0;
+        counter-increment: my-awesome-counter;
+        position: relative;        
+        background-color: #F2F2F2;
+        margin-bottom: 2em;    
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        height: 7.5em;
+        align-items: center;
+        display: flex;    
+        border-radius: 10px 10px 10px 10px;        
+    }
+
+    ol > li:hover{ 
+        background-color:  #F5EDFF;
+        transform: scale(1);   
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    }
+
+    ol {
+        counter-reset: my-awesome-counter;
+        list-style: none;
+        padding-left: 13%; 
+        transition: all 450ms;
+        cursor: pointer;    
+    }
+
+    li {    
+        padding-right: 25px;
+        max-width: 85%;
+    }
+
+    li:before {        
+        content: counter(my-awesome-counter);
+        line-height: 1.7;
+        width: 37px;
+        top: 0;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        height: 1.7em;
+        margin-left: -17px;
+        font-size: 1.3em;
+        font-weight: 800;
+        background-color: $couleur_principal;        
+    }
+
+    #icon__fonction{        
+        color:#7E7E7E;
+        margin-left: 16%;
+        font-size: 22px;
+    }
+
+    #icon__fonction:hover{   
+        color: $couleur_principal;
+    }
+   
+    .restautants_titre{      
+        padding-left: 10%;
+        padding-top:10%;
+        padding-bottom: 3%;
+        margin-bottom: -7px;
+        background-color: #F2F2F2;
+        margin: 150px 0px 0px 0px;
+
+    }
+
+    .cartes-resto{
+        background-color:#F2F2F2;
+        padding-bottom: 15%; 
+        display: flex;        
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .carte__resto{   
+        background-color:$color_text;    
+        border-radius: 1.2em; 
+        width: 40%;   
+        box-shadow:rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+        margin-bottom: 5%;
+        text-decoration: none;
+        color: inherit;   
+    }
+
+    .cartes-resto__img > img{
+        width: 100%;
+        border-radius:15px 15px 0px 0px;  
+        height: 9em;
+        object-fit: cover;     
+    }
+
+    .carte__resto h4 , p{
+        margin-left: 5%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        width: 100%;    
+    }
+
+    .cartes-resto__img{    
+        position: relative;
+        text-align: right;
+    }
+
+    .nouveau{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        color:$couleur_nouveau_text;
+        background-color:$couleur_nouveau;
+        padding: 3%;
+        font-weight: bold; 
+        border-radius: 5px 5px 5px 5px;   
+    }
+
+    .carte--titre{
+        margin-top: 5%;
+    }
+
+    .carte__titre__icon{
+        display: flex;
+        justify-content: space-between;    
+        align-items: center;
+    }
+
+    .container_coeur{
+        display: flex;
+        padding-right: 10px;        
+    }
+
+    .fa{   
+        background:$gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;    
+    }
+
+    div.coeur_plein svg * {
+        fill: url(#svg_coeur_gradient);  
+    }
+
+    div.coeur_plein {
+        font-size: 32.6px;    
+        margin-top: -3px;         
+        opacity: 0;  
+        z-index: 10;  
+        right: 0; 
+        margin-left: -30.7px;        
+        position:relative; 
+    }
+
+    div.coeur_plein:hover{
+        animation: 300ms coeur ease-out forwards;
+    }  
+    @keyframes coeur{
+        0%{
+        opacity: 0;
+        transform: scale(0.1);    
+        transform-origin:bottom;
+        }   
+        50%{
+        opacity: 1;
+        transform: scale(0.8);
+        transform-origin:bottom
+        }
+        100%{
+        opacity: 1;
+        transform: scale(1);
+        transform-origin:bottom
+        }
+    }
+    .coeur_vide{
+        font-size: 1.8em;       
+        font-weight:initial;       
+        position: relative;        
+        right: 0;          
+    }
+
+    p{
+        padding-bottom: 15px;
+    }
+
+    h2{
+        margin-left: 5%;
+        padding-top: 10%;
+    }
+
+    footer{
+        background-color: $background-color_footer;
+        padding-bottom: 7%;
+    }
+
+    .logo_resto__footer > path{
+        fill: $color_text;
+    }
+
+    .logo_resto__footer{
+        width: 20%; 
+        margin-left: 5%;
+        margin-top: 5%;
+        margin-bottom: 1%;
+    }
+    
+    .info__footer {
+        color: $color_text;
+        font-size: 0.9em;       
+        display: flex;
+    }
+
+    .info__footer > div{
+        font-size: 1em;
+        line-height: 1.7em;
+        margin-left: 5%;
+        width: 200px;
+    }
+
+    .info__footer > div > a:last-child{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    #icon_footer{
+        margin-right: 3%;
+        font-size: 0.8em;
+    }  
+}
+
+
+
+
+
+
+
+
+

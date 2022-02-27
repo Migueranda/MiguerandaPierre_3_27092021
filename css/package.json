@@ -1,0 +1,35 @@
+{
+  "name": "writing-sass",
+  "version": "1.0.0",
+  "description": "Joe Blow's portfolio",
+  "main": "index.js",
+  "scripts": {
+    "accueil_mobile":"sass --watch ./accueil_mobile.scss:./accueil_mobile.css",
+    "menu_alafrancaise_mobile":"sass --watch ./menu_alafrancaise_mobile.scss:./menu_alafrancaise_mobile.css",
+    "menu_lanoteenchantee_mobile":"sass --watch ./menu_lanoteenchantee_mobile.scss:./menu_lanoteenchantee_mobile.css",
+    "menu_lapalettedugout_mobile":"sass --watch ./menu_lapalettedugout_mobile.scss:./menu_lapalettedugout_mobile.css",
+    "menu_ledelicedessens_mobile":"sass --watch ./menu_ledelicedessens_mobile.scss:./menu_ledelicedessens_mobile.css" ,
+    
+    "accueil_tablette":"sass --watch ./accueil_tablette.scss:./accueil_tablette.css",
+    "menu_alafrancaise_tablette":"sass --watch ./menu_alafrancaise_tablette.scss:./menu_alafrancaise_tablette.css",
+    "menu_lanoteenchantee_tablette":"sass --watch ./menu_lanoteenchantee_tablette.scss:./menu_lanoteenchantee_tablette.css",
+    "menu_lapalettedugout_tablette":"sass --watch ./menu_lapalettedugout_tablette.scss:./menu_lapalettedugout_tablette.css",
+    "menu_ledelicedessens_tablette":"sass --watch ./menu_ledelicedessens_tablette.scss:./menu_ledelicedessens_tablette.css" ,
+    
+    "accueil_desktop":"sass --watch ./accueil_desktop.scss:./accueil_desktop.css",
+    "menu_alafrancaise_desktop":"sass --watch ./menu_alafrancaise_desktop.scss:./menu_alafrancaise_desktop.css",
+    "menu_lanoteenchantee_desktop":"sass --watch ./menu_lanoteenchantee_desktop.scss:./menu_lanoteenchantee_desktop.css",
+    "menu_lapalettedugout_desktop":"sass --watch ./menu_lapalettedugout_desktop.scss:./menu_lapalettedugout_desktop.css",
+    "menu_ledelicedessens_desktop":"sass --watch ./menu_ledelicedessens_desktop.scss:./menu_ledelicedessens_desktop.css" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gerkx/maintainable-css-with-sass.git"
+  },
+  "author": "gerkx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gerkx/maintainable-css-with-sass/issues"
+  },
+  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme"
+}
