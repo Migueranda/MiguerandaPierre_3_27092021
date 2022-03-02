@@ -303,18 +303,21 @@ footer{
 }
 .logo_resto__footer{
   width: 25%; 
-  margin-left:5%;
+  margin-left:3%;
   margin-top: 5%;
-  margin-bottom:2%;
+  margin-bottom:1%;
 }
 .info__footer {
   color: $color_text;
   font-size: 0.9em;
+  display: flex;
 }
 .info__footer > div{
   font-size: 1em;
-  margin-left: 5%;
+  margin-left: 15px;
   line-height: 1.7em;
+  width: 430px;
+  text-align: center;
 }
 .info__footer > div > a:last-child{
   color: inherit;
