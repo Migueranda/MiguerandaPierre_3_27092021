@@ -196,13 +196,13 @@
         color: $color_text;
         margin-top: 25px;    
     }
-    #icon__fonction{
+    .icon__fonction{
         margin-right: 6%;
         margin-left: 13%;
         color:#7E7E7E;
         margin-left: 15%;
     }
-    #icon__fonction:hover{
+    .icon__fonction:hover{
         color: $couleur_choixfonc;
     }
     .cartes-resto{
@@ -346,7 +346,7 @@
         text-decoration: none;
         color: inherit;
     }
-    #icon_footer{
+    .icon_footer{
         margin-right: 3%;
         font-size: 0.8em;
     }  

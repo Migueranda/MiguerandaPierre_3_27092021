@@ -210,13 +210,13 @@
     background-color: #9356DC;
   }
 
-  #icon__fonction {
+  .icon__fonction {
     margin-left: 17px;
     color: #7E7E7E;
     font-size: 21px;
   }
 
-  #icon__fonction:hover {
+  .icon__fonction:hover {
     color: #9356DC;
   }
 
@@ -389,7 +389,7 @@
     color: inherit;
   }
 
-  #icon_footer {
+  .icon_footer {
     font-size: 0.8em;
     margin-right: 1%;
   }
