@@ -25,7 +25,7 @@
     .loading{
         display: flex;
         justify-content: center;
-        padding-top: 0px;    
+        padding-top: 18%;    
     }
     .loading::after{
         content: "";
@@ -34,7 +34,7 @@
         border: 10px solid #dddddd;    
         border-top-color:$couleur_principal;
         border-radius: 50%;
-        animation: loading 1s ease infinite;    
+        animation: loading 2s ease infinite;    
     }
     @keyframes GlisserDepuisLeHaut{
         0%{
@@ -59,7 +59,7 @@
     }
 
     .loading_container {
-        animation: 1s ease-out 0s 1 CacherSpinner;
+        animation: 2s ease-out 0s 1 CacherSpinner;
         animation-fill-mode: forwards;
         display: flex;
         justify-content: center;    
@@ -71,7 +71,7 @@
         min-width: 320px;
         max-width: initial; 
     /*--------- Animation du bloc de page-------*/
-        animation: 1s ease-out 0s 1 GlisserDepuisLeHaut ;
+        animation: 2s ease-out 0s 1 GlisserDepuisLeHaut ;
         animation-fill-mode: both;
         z-index: 1;
     }
