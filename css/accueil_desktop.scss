@@ -25,9 +25,8 @@
     }
     .loading{
         display: flex;
-        justify-content: center;
-        // padding-top: 0px;   
-         padding-top: 16%;  
+        justify-content: center;         
+        padding-top: 16%;  
     }
     .loading::after{
         content: "";
@@ -67,7 +66,7 @@
     }
     // /*---------- ANIMATION DE SPINNER---------- */
     .bloc_de_page{
-        font-family: 'Raleway', sans-serif;        
+        font-family: 'Roboto', sans-serif;        
         max-width: initial; 
     /*--------- Animation du bloc de page-------*/
         animation: 2s ease-out 0s 1 GlisserDepuisLeHaut ;
