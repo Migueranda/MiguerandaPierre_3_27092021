@@ -1,7 +1,8 @@
 @media all and (min-width: 1024px){
 
-  $gradient: -webkit-linear-gradient(bottom,#EE55FF,#9356DC );
-    $couleur_nouveau:#99E2D0;
+    $gradient: linear-gradient(to bottom right,#EE55FF,#9356DC );
+    $gradient-eclairci: linear-gradient(to bottom right,#fc55ff,#9e56dc );
+    $couleur_Tertiaire:#99E2D0;
     $couleur_nouveau_text:#018767;
     $couleur_text:#fff;
     $background_color_header:#F6F6F6;
@@ -142,7 +143,7 @@ body {
     width: 10%;
     margin-left: 5%;
     font-weight: normal;
-    border-color:  $couleur_nouveau;
+    border-color:  $couleur_Tertiaire;
     border-bottom-style: solid;
     font-size: 2em;
   }
@@ -246,7 +247,7 @@ body {
     align-items: center;
     width: 0%;
     height: 200px;
-    background-color:  $couleur_nouveau;
+    background-color:  $couleur_Tertiaire;
     border-radius: 0px 14px 14px 0px;
     transition: width linear 300ms;
   }
@@ -260,7 +261,7 @@ body {
   .check_icone {
     line-height: 2.1 !important;
     background-color: white;
-    color: $couleur_nouveau;
+    color: $couleur_Tertiaire;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -330,6 +331,14 @@ body {
     justify-content: center;
     background:$gradient;
     border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 40px 40px 40px 40px;
+  }
+  .titre_bouton_commander:hover{
+    transition:transform 300ms ease-in;      
+    transition: 300ms ease-in;
+    background-image: $gradient-eclairci;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;       
   }
   
   .titre_bouton > h5 {

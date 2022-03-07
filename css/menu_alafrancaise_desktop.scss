@@ -1,11 +1,12 @@
 @media all and (min-width: 1024px){
 
-  $gradient: -webkit-linear-gradient(bottom,#EE55FF,#9356DC );
-    $couleur_nouveau:#99E2D0;
-    $couleur_nouveau_text:#018767;
-    $couleur_text:#fff;
-    $background_color_header:#F6F6F6;
-    $background-color_footer:#353535;
+  $gradient: linear-gradient(to bottom right,#EE55FF,#9356DC );
+  $gradient-eclairci: linear-gradient(to bottom right,#fc55ff,#9e56dc );
+  $couleur_nouveau:#99E2D0;
+  $couleur_nouveau_text:#018767;
+  $couleur_text:#fff;
+  $background_color_header:#F6F6F6;
+  $background-color_footer:#353535;
 
 body {
     margin: 0px 0px 0px 0px;    
@@ -311,7 +312,16 @@ body {
     justify-content: center;
     background:  $gradient;
     border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 40px 40px 40px 40px;
   }
+  
+  .titre_bouton_commander:hover{
+    transition:transform 300ms ease-in;      
+    transition: 300ms ease-in;
+    background-image: $gradient-eclairci;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;       
+}
   
   .titre_bouton > h5 {
     padding-bottom: 55px;

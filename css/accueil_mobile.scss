@@ -1,8 +1,8 @@
 @media screen and (max-width: 480px){
 
-
     // mes variable couleur
     $gradient: linear-gradient(to bottom right,#EE55FF,#9356DC );
+    $gradient-eclairci: linear-gradient(to bottom right,#fc55ff,#9e56dc );
     $couleur_choixfonc:#9356DC;
     $couleur_choixfonc-hover:#F5EDFF;
     $couleur_loading:#9356DC;
@@ -123,17 +123,26 @@
     }
     .titreh3__entete{
         font-weight: normal;
+        
     }
     .titre_bouton{
         border: 3px solid none;
         border-radius: 40px 40px 40px 40px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;    
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         height: 2.5em;    
         background-image: $gradient;
         color: $color_text;
         width: 16em;
         padding-top: 5%;
     }
+    
+    .titre_bouton:hover{
+        transition:transform 300ms ease-in;      
+        transition: 300ms ease-in;
+        background-image: $gradient-eclairci;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;       
+    }
+    
     nav > .fonction{
         margin-bottom: 15%;
         margin-right: 10px;    
