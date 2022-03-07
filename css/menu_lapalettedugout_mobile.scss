@@ -8,8 +8,6 @@ $background-color_footer:#353535;
 $color_text:#fff;
 $couleur_tertiaire:#99E2D0;
 
-
-
 body{
     margin: 0px 0px 0px 0px;
 }
@@ -242,14 +240,8 @@ div.coeur_plein:active{
     }
 }
 /* ______________________________TRANSITIONS-ANIMATIONS-Container_parent____________________________________ */
-.conteneur_entrees{    
-    animation-delay:200ms;    
-}
-.conteneur_plats{
-    animation-delay:400ms; 
-}
-.conteneur_desserts{
-    animation-delay:600ms;
+@each $name,$delay in ("conteneur_entrees":200ms,"conteneur_plats":400ms,"conteneur_desserts":600ms){
+    .#{$name} {animation-delay: $delay;}
 }
 .menu__entre_plat_dessert:hover > .container_check_icone { /*Transition avec bacground color mint*/    
     width: 120px;
